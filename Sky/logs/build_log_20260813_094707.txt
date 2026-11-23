@@ -1,0 +1,255 @@
+================================================================================
+批量构建日志 - 2026-08-13 09:47:07
+================================================================================
+
+================================================================================
+批量构建 SkyAgg_GRID_DB (支持 mode1 和 mode2)
+================================================================================
+
+📁 找到 12 个txt文件:
+  - 3_100000_ANTI.txt
+  - 3_100000_CORR.txt
+  - 3_100000_HOS.txt
+  - 3_100000_INDE.txt
+  - 3_100000_STR.txt
+  - 3_100000_VEH.txt
+  - 3_10000_ANTI.txt
+  - 3_10000_CORR.txt
+  - 3_10000_HOS.txt
+  - 3_10000_INDE.txt
+  - 3_10000_STR.txt
+  - 3_10000_VEH.txt
+
+📊 总任务数: 24 (12 个文件 × 2 个模式 (共 1 + 1 个参数))
+
+
+[1/24] 处理: 3_100000_ANTI [mode1]
+
+================================================================================
+文件: 3_100000_ANTI.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_3_100000_ANTI_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/3_100000_ANTI.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_3_100000_ANTI_mode1_75_50
+================================================================================
+
+[STDOUT]
+Loaded 100000 points from ./data/dataset/3_100000_ANTI.txt
+Expected cols=1000, rows=1000, cells=1000000
+NE-Quadrant column scan/merge/compact time: 124900.37 ms (released 0 stale masks)
+NW-Quadrant column scan/merge/compact time: 184977.27 ms (released 669977 stale masks)
+SW-Quadrant column scan/merge/compact time: 133915.52 ms (released 390501 stale masks)
+SE-Quadrant column scan/merge/compact time: 190304.04 ms (released 996439 stale masks)
+GlobalFineGrid live unique mask count: 997552
+
+Global fine-grid construction time: 646035.01 ms
+
+Global FineGrid after streaming merge NE/NW/SW/SE
+  cols=1000, rows=1000, cells=1000000
+  avg_size=1809.52, max_size=3191
+  unique_mask_count=997552
+
+Boundary weight computation time: 24430.89 ms
+
+Recommended parameters on GlobalFineGrid:
+  target_cols=315, target_rows=318
+  target_grid_cells=100000
+  achieved_compression=9.98
+  total_precision=0.75, cell_precision=0.50
+  max_total_error=603173611
+  max_cell_error=2634
+
+build_coarse_grid_by_direct time: 12094.62 ms
+
+Final Global GRID (mode1)
+  cols=315, rows=318, cells=100170
+  total_positive_error=205346418
+  max_cell_extra=1709
+  avg_candidate_size=1792.22, max_candidate_size=4332
+  avg_candidate_size_weighted_by_fine_cell=2014.87
+  unique_mask_count=100171
+
+Exported GRID database for Piano-PIR:
+  DB file      : /SkyDB/skyagg_griddb_3_100000_ANTI_mode1_75_50.pir.db
+  metadata     : /SkyDB/skyagg_griddb_3_100000_ANTI_mode1_75_50.pir.meta.json
+  DB records   : 100170
+  one query -> one PIR index -> one full skyline record
+
+✅ 3_100000_ANTI.txt [mode1] 执行成功 (1470.03s)
+💾 系统内存: 已用 1.6GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 21.4GB
+
+[2/24] 处理: 3_100000_ANTI [mode2]
+
+================================================================================
+文件: 3_100000_ANTI.txt
+模式: mode2
+输出: /SkyDB/skyagg_griddb_3_100000_ANTI_mode2_95_90
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/3_100000_ANTI.txt --mode mode2 --pi-avg 0.95 --pi-min 0.9 --export-prefix /SkyDB/skyagg_griddb_3_100000_ANTI_mode2_95_90
+================================================================================
+
+[STDOUT]
+Loaded 100000 points from ./data/dataset/3_100000_ANTI.txt
+Expected cols=1000, rows=1000, cells=1000000
+NE-Quadrant column scan/merge/compact time: 125167.84 ms (released 0 stale masks)
+NW-Quadrant column scan/merge/compact time: 184942.50 ms (released 669977 stale masks)
+SW-Quadrant column scan/merge/compact time: 133898.05 ms (released 390501 stale masks)
+SE-Quadrant column scan/merge/compact time: 188178.07 ms (released 996439 stale masks)
+GlobalFineGrid live unique mask count: 997552
+
+Global fine-grid construction time: 644088.77 ms
+
+Global FineGrid after streaming merge NE/NW/SW/SE
+  cols=1000, rows=1000, cells=1000000
+  avg_size=1809.52, max_size=3191
+  unique_mask_count=997552
+
+Boundary weight computation time: 24349.99 ms
+
+Recommended parameters on GlobalFineGrid:
+  target_cols=315, target_rows=318
+  target_grid_cells=100000
+  achieved_compression=9.98
+  total_precision=0.95, cell_precision=0.90
+  max_total_error=95237938
+  max_cell_error=292
+
+build_coarse_grid_by_direct time: 12035.40 ms
+
+Mode 2 initial TopWeight grid (mode1)
+  cols=315, rows=318, cells=100170
+  total_positive_error=205346418
+  max_cell_extra=1709
+  avg_candidate_size=1792.22, max_candidate_size=4332
+  avg_candidate_size_weighted_by_fine_cell=2014.87
+  unique_mask_count=100171
+
+Mode 2 budget check:
+  initial TopWeight grid violates the error budgets
+  total_positive_error=205346418, max_total_error=95237938
+  max_cell_extra=1709, max_cell_error=292
+  start binary search for a finer grid
+  iter=1, target_cells=550085, cols=740, rows=744, actual_cells=550560, total_error=17234245, max_extra=353, ok=False
+  iter=2, target_cells=775280, cols=878, rows=884, actual_cells=776152, total_error=4739364, max_extra=169, ok=True
+  iter=3, target_cells=663356, cols=812, rows=817, actual_cells=663404, total_error=9545477, max_extra=208, ok=True
+  iter=4, target_cells=606982, cols=777, rows=782, actual_cells=607614, total_error=12851994, max_extra=237, ok=True
+  iter=5, target_cells=579087, cols=759, rows=763, actual_cells=579117, total_error=14753352, max_extra=275, ok=True
+  iter=6, target_cells=564838, cols=750, rows=754, actual_cells=565500, total_error=15686546, max_extra=275, ok=True
+  iter=7, target_cells=558030, cols=745, rows=750, actual_cells=558750, total_error=16572917, max_extra=275, ok=True
+  iter=8, target_cells=554655, cols=743, rows=747, actual_cells=555021, total_error=16840350, max_extra=353, ok=False
+  iter=9, target_cells=556885, cols=744, rows=749, actual_cells=557256, total_error=16655585, max_extra=275, ok=True
+  iter=10, target_cells=556138, cols=744, rows=748, actual_cells=556512, total_error=16690763, max_extra=275, ok=True
+  iter=11, target_cells=555766, cols=744, rows=747, actual_cells=555768, total_error=16724728, max_extra=275, ok=True
+  iter=12, target_cells=555394, cols=743, rows=748, actual_cells=555764, total_error=16806385, max_extra=353, ok=False
+
+build_grid_by_mixed time: 201153.13 ms
+
+Final Global GRID (mode2)
+  cols=744, rows=747, cells=555768
+  total_positive_error=16724728
+  max_cell_extra=275
+  avg_candidate_size=1773.49, max_candidate_size=3274
+  avg_candidate_size_weighted_by_fine_cell=1826.25
+  unique_mask_count=555769
+
+
+[STDERR]
+Traceback (most recent call last):
+  File "/home/ecs-user/Sky/SkyAgg_GRID_DB.py", line 1421, in export_grid_database_for_pir
+    f.write(struct.pack("<Q", int(v)))
+OSError: [Errno 28] No space left on device
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ecs-user/Sky/SkyAgg_GRID_DB.py", line 1814, in <module>
+    main()
+  File "/home/ecs-user/Sky/SkyAgg_GRID_DB.py", line 1754, in main
+    db_path, meta_path = export_grid_database_for_pir(grid, args.export_prefix, points)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ecs-user/Sky/SkyAgg_GRID_DB.py", line 1415, in export_grid_database_for_pir
+    with open(db_path, "wb") as f:
+OSError: [Errno 28] No space left on device
+
+❌ 3_100000_ANTI.txt [mode2] 执行失败，返回码: 1 (3550.88s)
+💾 系统内存: 已用 1.5GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 33.4GB
+
+[3/24] 处理: 3_100000_CORR [mode1]
+
+================================================================================
+文件: 3_100000_CORR.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_3_100000_CORR_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/3_100000_CORR.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_3_100000_CORR_mode1_75_50
+================================================================================
+
+[STDOUT]
+Loaded 100000 points from ./data/dataset/3_100000_CORR.txt
+Expected cols=998, rows=997, cells=995006
+NE-Quadrant column scan/merge/compact time: 215545.95 ms (released 0 stale masks)
+NW-Quadrant column scan/merge/compact time: 186522.83 ms (released 620441 stale masks)
+SW-Quadrant column scan/merge/compact time: 225681.09 ms (released 744573 stale masks)
+SE-Quadrant column scan/merge/compact time: 184622.61 ms (released 922225 stale masks)
+GlobalFineGrid live unique mask count: 972039
+
+Global fine-grid construction time: 824598.44 ms
+
+Global FineGrid after streaming merge NE/NW/SW/SE
+  cols=998, rows=997, cells=995006
+  avg_size=1621.95, max_size=2288
+  unique_mask_count=972039
+
+Boundary weight computation time: 24349.12 ms
+
+Recommended parameters on GlobalFineGrid:
+  target_cols=315, target_rows=316
+  target_grid_cells=99501
+  achieved_compression=10.00
+  total_precision=0.75, cell_precision=0.50
+  max_total_error=537949144
+  max_cell_error=1881
+
+build_coarse_grid_by_direct time: 12033.56 ms
+
+Final Global GRID (mode1)
+  cols=315, rows=316, cells=99540
+  total_positive_error=249774760
+  max_cell_extra=1519
+  avg_candidate_size=1759.77, max_candidate_size=2734
+  avg_candidate_size_weighted_by_fine_cell=1872.98
+  unique_mask_count=99541
+
+
+[STDERR]
+Traceback (most recent call last):
+  File "/home/ecs-user/Sky/SkyAgg_GRID_DB.py", line 1421, in export_grid_database_for_pir
+    f.write(struct.pack("<Q", int(v)))
+OSError: [Errno 28] No space left on device
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ecs-user/Sky/SkyAgg_GRID_DB.py", line 1814, in <module>
+    main()
+  File "/home/ecs-user/Sky/SkyAgg_GRID_DB.py", line 1754, in main
+    db_path, meta_path = export_grid_database_for_pir(grid, args.export_prefix, points)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ecs-user/Sky/SkyAgg_GRID_DB.py", line 1415, in export_grid_database_for_pir
+    with open(db_path, "wb") as f:
+OSError: [Errno 28] No space left on device
+
+❌ 3_100000_CORR.txt [mode1] 执行失败，返回码: 1 (876.97s)
+💾 系统内存: 已用 1.6GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 20.2GB
+
+[4/24] 处理: 3_100000_CORR [mode2]
+
+================================================================================
+文件: 3_100000_CORR.txt
+模式: mode2
+输出: /SkyDB/skyagg_griddb_3_100000_CORR_mode2_95_90
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/3_100000_CORR.txt --mode mode2 --pi-avg 0.95 --pi-min 0.9 --export-prefix /SkyDB/skyagg_griddb_3_100000_CORR_mode2_95_90
+================================================================================

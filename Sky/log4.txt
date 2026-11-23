@@ -1,0 +1,956 @@
+nohup: ignoring input
+================================================================================
+批量构建日志 - 2026-08-11 16:41:06
+================================================================================
+
+================================================================================
+批量构建 SkyAgg_GRID_DB (支持 mode1 和 mode2)
+================================================================================
+
+📁 找到 30 个txt文件:
+  - 4_1000_ANTI.txt
+  - 4_1000_CORR.txt
+  - 4_1000_HOS.txt
+  - 4_1000_INDE.txt
+  - 4_1000_STR.txt
+  - 4_1000_VEH.txt
+  - 4_3000_ANTI.txt
+  - 4_3000_CORR.txt
+  - 4_3000_HOS.txt
+  - 4_3000_INDE.txt
+  - 4_3000_STR.txt
+  - 4_3000_VEH.txt
+  - 4_5000_ANTI.txt
+  - 4_5000_CORR.txt
+  - 4_5000_HOS.txt
+  - 4_5000_INDE.txt
+  - 4_5000_STR.txt
+  - 4_5000_VEH.txt
+  - 4_7000_ANTI.txt
+  - 4_7000_CORR.txt
+  - 4_7000_HOS.txt
+  - 4_7000_INDE.txt
+  - 4_7000_STR.txt
+  - 4_7000_VEH.txt
+  - 4_9000_ANTI.txt
+  - 4_9000_CORR.txt
+  - 4_9000_HOS.txt
+  - 4_9000_INDE.txt
+  - 4_9000_STR.txt
+  - 4_9000_VEH.txt
+
+📊 总任务数: 60 (30 个文件 × 2 个模式 (共 1 + 1 个参数))
+
+
+[1/60] 处理: 4_1000_ANTI [mode1]
+
+================================================================================
+文件: 4_1000_ANTI.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_4_1000_ANTI_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_1000_ANTI.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_4_1000_ANTI_mode1_75_50
+================================================================================
+✅ 4_1000_ANTI.txt [mode1] 执行成功 (9.15s)
+💾 系统内存: 已用 1.7GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 1.7GB
+
+[2/60] 处理: 4_1000_ANTI [mode2]
+
+================================================================================
+文件: 4_1000_ANTI.txt
+模式: mode2
+输出: /SkyDB/skyagg_griddb_4_1000_ANTI_mode2_95_90
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_1000_ANTI.txt --mode mode2 --pi-avg 0.95 --pi-min 0.9 --export-prefix /SkyDB/skyagg_griddb_4_1000_ANTI_mode2_95_90
+================================================================================
+✅ 4_1000_ANTI.txt [mode2] 执行成功 (9.21s)
+💾 系统内存: 已用 1.8GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 1.8GB
+
+[3/60] 处理: 4_1000_CORR [mode1]
+
+================================================================================
+文件: 4_1000_CORR.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_4_1000_CORR_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_1000_CORR.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_4_1000_CORR_mode1_75_50
+================================================================================
+✅ 4_1000_CORR.txt [mode1] 执行成功 (8.22s)
+💾 系统内存: 已用 1.8GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 1.8GB
+
+[4/60] 处理: 4_1000_CORR [mode2]
+
+================================================================================
+文件: 4_1000_CORR.txt
+模式: mode2
+输出: /SkyDB/skyagg_griddb_4_1000_CORR_mode2_95_90
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_1000_CORR.txt --mode mode2 --pi-avg 0.95 --pi-min 0.9 --export-prefix /SkyDB/skyagg_griddb_4_1000_CORR_mode2_95_90
+================================================================================
+✅ 4_1000_CORR.txt [mode2] 执行成功 (8.15s)
+💾 系统内存: 已用 1.8GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 1.9GB
+
+[5/60] 处理: 4_1000_HOS [mode1]
+
+================================================================================
+文件: 4_1000_HOS.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_4_1000_HOS_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_1000_HOS.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_4_1000_HOS_mode1_75_50
+================================================================================
+✅ 4_1000_HOS.txt [mode1] 执行成功 (4.89s)
+💾 系统内存: 已用 1.8GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 1.8GB
+
+[6/60] 处理: 4_1000_HOS [mode2]
+
+================================================================================
+文件: 4_1000_HOS.txt
+模式: mode2
+输出: /SkyDB/skyagg_griddb_4_1000_HOS_mode2_95_90
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_1000_HOS.txt --mode mode2 --pi-avg 0.95 --pi-min 0.9 --export-prefix /SkyDB/skyagg_griddb_4_1000_HOS_mode2_95_90
+================================================================================
+✅ 4_1000_HOS.txt [mode2] 执行成功 (4.86s)
+💾 系统内存: 已用 1.6GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 1.7GB
+
+[7/60] 处理: 4_1000_INDE [mode1]
+
+================================================================================
+文件: 4_1000_INDE.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_4_1000_INDE_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_1000_INDE.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_4_1000_INDE_mode1_75_50
+================================================================================
+✅ 4_1000_INDE.txt [mode1] 执行成功 (9.16s)
+💾 系统内存: 已用 1.6GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 1.7GB
+
+[8/60] 处理: 4_1000_INDE [mode2]
+
+================================================================================
+文件: 4_1000_INDE.txt
+模式: mode2
+输出: /SkyDB/skyagg_griddb_4_1000_INDE_mode2_95_90
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_1000_INDE.txt --mode mode2 --pi-avg 0.95 --pi-min 0.9 --export-prefix /SkyDB/skyagg_griddb_4_1000_INDE_mode2_95_90
+================================================================================
+✅ 4_1000_INDE.txt [mode2] 执行成功 (19.39s)
+💾 系统内存: 已用 1.7GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 1.7GB
+
+[9/60] 处理: 4_1000_STR [mode1]
+
+================================================================================
+文件: 4_1000_STR.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_4_1000_STR_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_1000_STR.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_4_1000_STR_mode1_75_50
+================================================================================
+✅ 4_1000_STR.txt [mode1] 执行成功 (7.44s)
+💾 系统内存: 已用 1.7GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 1.7GB
+
+[10/60] 处理: 4_1000_STR [mode2]
+
+================================================================================
+文件: 4_1000_STR.txt
+模式: mode2
+输出: /SkyDB/skyagg_griddb_4_1000_STR_mode2_95_90
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_1000_STR.txt --mode mode2 --pi-avg 0.95 --pi-min 0.9 --export-prefix /SkyDB/skyagg_griddb_4_1000_STR_mode2_95_90
+================================================================================
+✅ 4_1000_STR.txt [mode2] 执行成功 (7.35s)
+💾 系统内存: 已用 1.7GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 1.7GB
+
+[11/60] 处理: 4_1000_VEH [mode1]
+
+================================================================================
+文件: 4_1000_VEH.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_4_1000_VEH_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_1000_VEH.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_4_1000_VEH_mode1_75_50
+================================================================================
+✅ 4_1000_VEH.txt [mode1] 执行成功 (4.37s)
+💾 系统内存: 已用 1.7GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 1.7GB
+
+[12/60] 处理: 4_1000_VEH [mode2]
+
+================================================================================
+文件: 4_1000_VEH.txt
+模式: mode2
+输出: /SkyDB/skyagg_griddb_4_1000_VEH_mode2_95_90
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_1000_VEH.txt --mode mode2 --pi-avg 0.95 --pi-min 0.9 --export-prefix /SkyDB/skyagg_griddb_4_1000_VEH_mode2_95_90
+================================================================================
+✅ 4_1000_VEH.txt [mode2] 执行成功 (4.37s)
+💾 系统内存: 已用 1.7GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 1.8GB
+
+[13/60] 处理: 4_3000_ANTI [mode1]
+
+================================================================================
+文件: 4_3000_ANTI.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_4_3000_ANTI_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_3000_ANTI.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_4_3000_ANTI_mode1_75_50
+================================================================================
+✅ 4_3000_ANTI.txt [mode1] 执行成功 (39.56s)
+💾 系统内存: 已用 1.7GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 2.0GB
+
+[14/60] 处理: 4_3000_ANTI [mode2]
+
+================================================================================
+文件: 4_3000_ANTI.txt
+模式: mode2
+输出: /SkyDB/skyagg_griddb_4_3000_ANTI_mode2_95_90
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_3000_ANTI.txt --mode mode2 --pi-avg 0.95 --pi-min 0.9 --export-prefix /SkyDB/skyagg_griddb_4_3000_ANTI_mode2_95_90
+================================================================================
+✅ 4_3000_ANTI.txt [mode2] 执行成功 (39.67s)
+💾 系统内存: 已用 1.8GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 2.1GB
+
+[15/60] 处理: 4_3000_CORR [mode1]
+
+================================================================================
+文件: 4_3000_CORR.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_4_3000_CORR_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_3000_CORR.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_4_3000_CORR_mode1_75_50
+================================================================================
+✅ 4_3000_CORR.txt [mode1] 执行成功 (32.98s)
+💾 系统内存: 已用 1.7GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 2.1GB
+
+[16/60] 处理: 4_3000_CORR [mode2]
+
+================================================================================
+文件: 4_3000_CORR.txt
+模式: mode2
+输出: /SkyDB/skyagg_griddb_4_3000_CORR_mode2_95_90
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_3000_CORR.txt --mode mode2 --pi-avg 0.95 --pi-min 0.9 --export-prefix /SkyDB/skyagg_griddb_4_3000_CORR_mode2_95_90
+================================================================================
+✅ 4_3000_CORR.txt [mode2] 执行成功 (33.79s)
+💾 系统内存: 已用 1.8GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 2.1GB
+
+[17/60] 处理: 4_3000_HOS [mode1]
+
+================================================================================
+文件: 4_3000_HOS.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_4_3000_HOS_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_3000_HOS.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_4_3000_HOS_mode1_75_50
+================================================================================
+✅ 4_3000_HOS.txt [mode1] 执行成功 (23.89s)
+💾 系统内存: 已用 1.8GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 2.0GB
+
+[18/60] 处理: 4_3000_HOS [mode2]
+
+================================================================================
+文件: 4_3000_HOS.txt
+模式: mode2
+输出: /SkyDB/skyagg_griddb_4_3000_HOS_mode2_95_90
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_3000_HOS.txt --mode mode2 --pi-avg 0.95 --pi-min 0.9 --export-prefix /SkyDB/skyagg_griddb_4_3000_HOS_mode2_95_90
+================================================================================
+✅ 4_3000_HOS.txt [mode2] 执行成功 (24.06s)
+💾 系统内存: 已用 1.8GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 2.0GB
+
+[19/60] 处理: 4_3000_INDE [mode1]
+
+================================================================================
+文件: 4_3000_INDE.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_4_3000_INDE_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_3000_INDE.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_4_3000_INDE_mode1_75_50
+================================================================================
+✅ 4_3000_INDE.txt [mode1] 执行成功 (45.28s)
+💾 系统内存: 已用 1.8GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 2.2GB
+
+[20/60] 处理: 4_3000_INDE [mode2]
+
+================================================================================
+文件: 4_3000_INDE.txt
+模式: mode2
+输出: /SkyDB/skyagg_griddb_4_3000_INDE_mode2_95_90
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_3000_INDE.txt --mode mode2 --pi-avg 0.95 --pi-min 0.9 --export-prefix /SkyDB/skyagg_griddb_4_3000_INDE_mode2_95_90
+================================================================================
+✅ 4_3000_INDE.txt [mode2] 执行成功 (46.03s)
+💾 系统内存: 已用 1.8GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 2.2GB
+
+[21/60] 处理: 4_3000_STR [mode1]
+
+================================================================================
+文件: 4_3000_STR.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_4_3000_STR_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_3000_STR.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_4_3000_STR_mode1_75_50
+================================================================================
+✅ 4_3000_STR.txt [mode1] 执行成功 (36.01s)
+💾 系统内存: 已用 1.8GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 2.1GB
+
+[22/60] 处理: 4_3000_STR [mode2]
+
+================================================================================
+文件: 4_3000_STR.txt
+模式: mode2
+输出: /SkyDB/skyagg_griddb_4_3000_STR_mode2_95_90
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_3000_STR.txt --mode mode2 --pi-avg 0.95 --pi-min 0.9 --export-prefix /SkyDB/skyagg_griddb_4_3000_STR_mode2_95_90
+================================================================================
+✅ 4_3000_STR.txt [mode2] 执行成功 (35.67s)
+💾 系统内存: 已用 1.8GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 2.1GB
+
+[23/60] 处理: 4_3000_VEH [mode1]
+
+================================================================================
+文件: 4_3000_VEH.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_4_3000_VEH_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_3000_VEH.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_4_3000_VEH_mode1_75_50
+================================================================================
+✅ 4_3000_VEH.txt [mode1] 执行成功 (17.57s)
+💾 系统内存: 已用 1.8GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 1.9GB
+
+[24/60] 处理: 4_3000_VEH [mode2]
+
+================================================================================
+文件: 4_3000_VEH.txt
+模式: mode2
+输出: /SkyDB/skyagg_griddb_4_3000_VEH_mode2_95_90
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_3000_VEH.txt --mode mode2 --pi-avg 0.95 --pi-min 0.9 --export-prefix /SkyDB/skyagg_griddb_4_3000_VEH_mode2_95_90
+================================================================================
+✅ 4_3000_VEH.txt [mode2] 执行成功 (17.46s)
+💾 系统内存: 已用 1.7GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 1.9GB
+
+[25/60] 处理: 4_5000_ANTI [mode1]
+
+================================================================================
+文件: 4_5000_ANTI.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_4_5000_ANTI_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_5000_ANTI.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_4_5000_ANTI_mode1_75_50
+================================================================================
+✅ 4_5000_ANTI.txt [mode1] 执行成功 (72.10s)
+💾 系统内存: 已用 1.7GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 2.4GB
+
+[26/60] 处理: 4_5000_ANTI [mode2]
+
+================================================================================
+文件: 4_5000_ANTI.txt
+模式: mode2
+输出: /SkyDB/skyagg_griddb_4_5000_ANTI_mode2_95_90
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_5000_ANTI.txt --mode mode2 --pi-avg 0.95 --pi-min 0.9 --export-prefix /SkyDB/skyagg_griddb_4_5000_ANTI_mode2_95_90
+================================================================================
+✅ 4_5000_ANTI.txt [mode2] 执行成功 (74.08s)
+💾 系统内存: 已用 1.8GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 2.4GB
+
+[27/60] 处理: 4_5000_CORR [mode1]
+
+================================================================================
+文件: 4_5000_CORR.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_4_5000_CORR_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_5000_CORR.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_4_5000_CORR_mode1_75_50
+================================================================================
+✅ 4_5000_CORR.txt [mode1] 执行成功 (62.47s)
+💾 系统内存: 已用 1.7GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 2.4GB
+
+[28/60] 处理: 4_5000_CORR [mode2]
+
+================================================================================
+文件: 4_5000_CORR.txt
+模式: mode2
+输出: /SkyDB/skyagg_griddb_4_5000_CORR_mode2_95_90
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_5000_CORR.txt --mode mode2 --pi-avg 0.95 --pi-min 0.9 --export-prefix /SkyDB/skyagg_griddb_4_5000_CORR_mode2_95_90
+================================================================================
+✅ 4_5000_CORR.txt [mode2] 执行成功 (62.15s)
+💾 系统内存: 已用 1.7GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 2.4GB
+
+[29/60] 处理: 4_5000_HOS [mode1]
+
+================================================================================
+文件: 4_5000_HOS.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_4_5000_HOS_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_5000_HOS.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_4_5000_HOS_mode1_75_50
+================================================================================
+✅ 4_5000_HOS.txt [mode1] 执行成功 (47.32s)
+💾 系统内存: 已用 1.7GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 2.2GB
+
+[30/60] 处理: 4_5000_HOS [mode2]
+
+================================================================================
+文件: 4_5000_HOS.txt
+模式: mode2
+输出: /SkyDB/skyagg_griddb_4_5000_HOS_mode2_95_90
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_5000_HOS.txt --mode mode2 --pi-avg 0.95 --pi-min 0.9 --export-prefix /SkyDB/skyagg_griddb_4_5000_HOS_mode2_95_90
+================================================================================
+✅ 4_5000_HOS.txt [mode2] 执行成功 (47.30s)
+💾 系统内存: 已用 1.8GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 2.2GB
+
+[31/60] 处理: 4_5000_INDE [mode1]
+
+================================================================================
+文件: 4_5000_INDE.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_4_5000_INDE_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_5000_INDE.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_4_5000_INDE_mode1_75_50
+================================================================================
+✅ 4_5000_INDE.txt [mode1] 执行成功 (76.58s)
+💾 系统内存: 已用 1.8GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 2.6GB
+
+[32/60] 处理: 4_5000_INDE [mode2]
+
+================================================================================
+文件: 4_5000_INDE.txt
+模式: mode2
+输出: /SkyDB/skyagg_griddb_4_5000_INDE_mode2_95_90
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_5000_INDE.txt --mode mode2 --pi-avg 0.95 --pi-min 0.9 --export-prefix /SkyDB/skyagg_griddb_4_5000_INDE_mode2_95_90
+================================================================================
+✅ 4_5000_INDE.txt [mode2] 执行成功 (77.19s)
+💾 系统内存: 已用 1.8GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 2.6GB
+
+[33/60] 处理: 4_5000_STR [mode1]
+
+================================================================================
+文件: 4_5000_STR.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_4_5000_STR_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_5000_STR.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_4_5000_STR_mode1_75_50
+================================================================================
+✅ 4_5000_STR.txt [mode1] 执行成功 (65.56s)
+💾 系统内存: 已用 1.8GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 2.4GB
+
+[34/60] 处理: 4_5000_STR [mode2]
+
+================================================================================
+文件: 4_5000_STR.txt
+模式: mode2
+输出: /SkyDB/skyagg_griddb_4_5000_STR_mode2_95_90
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_5000_STR.txt --mode mode2 --pi-avg 0.95 --pi-min 0.9 --export-prefix /SkyDB/skyagg_griddb_4_5000_STR_mode2_95_90
+================================================================================
+✅ 4_5000_STR.txt [mode2] 执行成功 (65.57s)
+💾 系统内存: 已用 1.8GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 2.4GB
+
+[35/60] 处理: 4_5000_VEH [mode1]
+
+================================================================================
+文件: 4_5000_VEH.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_4_5000_VEH_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_5000_VEH.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_4_5000_VEH_mode1_75_50
+================================================================================
+✅ 4_5000_VEH.txt [mode1] 执行成功 (32.11s)
+💾 系统内存: 已用 1.7GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 2.1GB
+
+[36/60] 处理: 4_5000_VEH [mode2]
+
+================================================================================
+文件: 4_5000_VEH.txt
+模式: mode2
+输出: /SkyDB/skyagg_griddb_4_5000_VEH_mode2_95_90
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_5000_VEH.txt --mode mode2 --pi-avg 0.95 --pi-min 0.9 --export-prefix /SkyDB/skyagg_griddb_4_5000_VEH_mode2_95_90
+================================================================================
+✅ 4_5000_VEH.txt [mode2] 执行成功 (46.57s)
+💾 系统内存: 已用 1.8GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 2.1GB
+
+[37/60] 处理: 4_7000_ANTI [mode1]
+
+================================================================================
+文件: 4_7000_ANTI.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_4_7000_ANTI_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_7000_ANTI.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_4_7000_ANTI_mode1_75_50
+================================================================================
+✅ 4_7000_ANTI.txt [mode1] 执行成功 (97.23s)
+💾 系统内存: 已用 1.8GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 2.8GB
+
+[38/60] 处理: 4_7000_ANTI [mode2]
+
+================================================================================
+文件: 4_7000_ANTI.txt
+模式: mode2
+输出: /SkyDB/skyagg_griddb_4_7000_ANTI_mode2_95_90
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_7000_ANTI.txt --mode mode2 --pi-avg 0.95 --pi-min 0.9 --export-prefix /SkyDB/skyagg_griddb_4_7000_ANTI_mode2_95_90
+================================================================================
+✅ 4_7000_ANTI.txt [mode2] 执行成功 (98.36s)
+💾 系统内存: 已用 1.8GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 2.8GB
+
+[39/60] 处理: 4_7000_CORR [mode1]
+
+================================================================================
+文件: 4_7000_CORR.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_4_7000_CORR_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_7000_CORR.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_4_7000_CORR_mode1_75_50
+================================================================================
+✅ 4_7000_CORR.txt [mode1] 执行成功 (86.49s)
+💾 系统内存: 已用 1.8GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 2.7GB
+
+[40/60] 处理: 4_7000_CORR [mode2]
+
+================================================================================
+文件: 4_7000_CORR.txt
+模式: mode2
+输出: /SkyDB/skyagg_griddb_4_7000_CORR_mode2_95_90
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_7000_CORR.txt --mode mode2 --pi-avg 0.95 --pi-min 0.9 --export-prefix /SkyDB/skyagg_griddb_4_7000_CORR_mode2_95_90
+================================================================================
+✅ 4_7000_CORR.txt [mode2] 执行成功 (86.38s)
+💾 系统内存: 已用 1.7GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 2.7GB
+
+[41/60] 处理: 4_7000_HOS [mode1]
+
+================================================================================
+文件: 4_7000_HOS.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_4_7000_HOS_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_7000_HOS.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_4_7000_HOS_mode1_75_50
+================================================================================
+✅ 4_7000_HOS.txt [mode1] 执行成功 (73.59s)
+💾 系统内存: 已用 1.8GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 2.5GB
+
+[42/60] 处理: 4_7000_HOS [mode2]
+
+================================================================================
+文件: 4_7000_HOS.txt
+模式: mode2
+输出: /SkyDB/skyagg_griddb_4_7000_HOS_mode2_95_90
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_7000_HOS.txt --mode mode2 --pi-avg 0.95 --pi-min 0.9 --export-prefix /SkyDB/skyagg_griddb_4_7000_HOS_mode2_95_90
+================================================================================
+✅ 4_7000_HOS.txt [mode2] 执行成功 (74.45s)
+💾 系统内存: 已用 1.8GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 2.6GB
+
+[43/60] 处理: 4_7000_INDE [mode1]
+
+================================================================================
+文件: 4_7000_INDE.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_4_7000_INDE_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_7000_INDE.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_4_7000_INDE_mode1_75_50
+================================================================================
+✅ 4_7000_INDE.txt [mode1] 执行成功 (103.35s)
+💾 系统内存: 已用 1.8GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 3.0GB
+
+[44/60] 处理: 4_7000_INDE [mode2]
+
+================================================================================
+文件: 4_7000_INDE.txt
+模式: mode2
+输出: /SkyDB/skyagg_griddb_4_7000_INDE_mode2_95_90
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_7000_INDE.txt --mode mode2 --pi-avg 0.95 --pi-min 0.9 --export-prefix /SkyDB/skyagg_griddb_4_7000_INDE_mode2_95_90
+================================================================================
+✅ 4_7000_INDE.txt [mode2] 执行成功 (104.65s)
+💾 系统内存: 已用 1.8GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 3.0GB
+
+[45/60] 处理: 4_7000_STR [mode1]
+
+================================================================================
+文件: 4_7000_STR.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_4_7000_STR_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_7000_STR.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_4_7000_STR_mode1_75_50
+================================================================================
+✅ 4_7000_STR.txt [mode1] 执行成功 (93.08s)
+💾 系统内存: 已用 1.8GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 2.8GB
+
+[46/60] 处理: 4_7000_STR [mode2]
+
+================================================================================
+文件: 4_7000_STR.txt
+模式: mode2
+输出: /SkyDB/skyagg_griddb_4_7000_STR_mode2_95_90
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_7000_STR.txt --mode mode2 --pi-avg 0.95 --pi-min 0.9 --export-prefix /SkyDB/skyagg_griddb_4_7000_STR_mode2_95_90
+================================================================================
+✅ 4_7000_STR.txt [mode2] 执行成功 (93.34s)
+💾 系统内存: 已用 1.7GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 2.8GB
+
+[47/60] 处理: 4_7000_VEH [mode1]
+
+================================================================================
+文件: 4_7000_VEH.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_4_7000_VEH_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_7000_VEH.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_4_7000_VEH_mode1_75_50
+================================================================================
+✅ 4_7000_VEH.txt [mode1] 执行成功 (46.95s)
+💾 系统内存: 已用 1.8GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 2.2GB
+
+[48/60] 处理: 4_7000_VEH [mode2]
+
+================================================================================
+文件: 4_7000_VEH.txt
+模式: mode2
+输出: /SkyDB/skyagg_griddb_4_7000_VEH_mode2_95_90
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_7000_VEH.txt --mode mode2 --pi-avg 0.95 --pi-min 0.9 --export-prefix /SkyDB/skyagg_griddb_4_7000_VEH_mode2_95_90
+================================================================================
+✅ 4_7000_VEH.txt [mode2] 执行成功 (73.43s)
+💾 系统内存: 已用 1.8GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 2.3GB
+
+[49/60] 处理: 4_9000_ANTI [mode1]
+
+================================================================================
+文件: 4_9000_ANTI.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_4_9000_ANTI_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_9000_ANTI.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_4_9000_ANTI_mode1_75_50
+================================================================================
+✅ 4_9000_ANTI.txt [mode1] 执行成功 (141.81s)
+💾 系统内存: 已用 1.8GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 3.3GB
+
+[50/60] 处理: 4_9000_ANTI [mode2]
+
+================================================================================
+文件: 4_9000_ANTI.txt
+模式: mode2
+输出: /SkyDB/skyagg_griddb_4_9000_ANTI_mode2_95_90
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_9000_ANTI.txt --mode mode2 --pi-avg 0.95 --pi-min 0.9 --export-prefix /SkyDB/skyagg_griddb_4_9000_ANTI_mode2_95_90
+================================================================================
+✅ 4_9000_ANTI.txt [mode2] 执行成功 (176.15s)
+💾 系统内存: 已用 1.8GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 3.7GB
+
+[51/60] 处理: 4_9000_CORR [mode1]
+
+================================================================================
+文件: 4_9000_CORR.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_4_9000_CORR_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_9000_CORR.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_4_9000_CORR_mode1_75_50
+================================================================================
+✅ 4_9000_CORR.txt [mode1] 执行成功 (123.38s)
+💾 系统内存: 已用 1.8GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 3.1GB
+
+[52/60] 处理: 4_9000_CORR [mode2]
+
+================================================================================
+文件: 4_9000_CORR.txt
+模式: mode2
+输出: /SkyDB/skyagg_griddb_4_9000_CORR_mode2_95_90
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_9000_CORR.txt --mode mode2 --pi-avg 0.95 --pi-min 0.9 --export-prefix /SkyDB/skyagg_griddb_4_9000_CORR_mode2_95_90
+================================================================================
+✅ 4_9000_CORR.txt [mode2] 执行成功 (123.25s)
+💾 系统内存: 已用 1.8GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 3.2GB
+
+[53/60] 处理: 4_9000_HOS [mode1]
+
+================================================================================
+文件: 4_9000_HOS.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_4_9000_HOS_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_9000_HOS.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_4_9000_HOS_mode1_75_50
+================================================================================
+✅ 4_9000_HOS.txt [mode1] 执行成功 (110.08s)
+💾 系统内存: 已用 1.8GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 2.9GB
+
+[54/60] 处理: 4_9000_HOS [mode2]
+
+================================================================================
+文件: 4_9000_HOS.txt
+模式: mode2
+输出: /SkyDB/skyagg_griddb_4_9000_HOS_mode2_95_90
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_9000_HOS.txt --mode mode2 --pi-avg 0.95 --pi-min 0.9 --export-prefix /SkyDB/skyagg_griddb_4_9000_HOS_mode2_95_90
+================================================================================
+✅ 4_9000_HOS.txt [mode2] 执行成功 (110.95s)
+💾 系统内存: 已用 1.8GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 2.9GB
+
+[55/60] 处理: 4_9000_INDE [mode1]
+
+================================================================================
+文件: 4_9000_INDE.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_4_9000_INDE_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_9000_INDE.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_4_9000_INDE_mode1_75_50
+================================================================================
+✅ 4_9000_INDE.txt [mode1] 执行成功 (147.12s)
+💾 系统内存: 已用 1.8GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 3.4GB
+
+[56/60] 处理: 4_9000_INDE [mode2]
+
+================================================================================
+文件: 4_9000_INDE.txt
+模式: mode2
+输出: /SkyDB/skyagg_griddb_4_9000_INDE_mode2_95_90
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_9000_INDE.txt --mode mode2 --pi-avg 0.95 --pi-min 0.9 --export-prefix /SkyDB/skyagg_griddb_4_9000_INDE_mode2_95_90
+================================================================================
+✅ 4_9000_INDE.txt [mode2] 执行成功 (147.11s)
+💾 系统内存: 已用 1.8GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 3.4GB
+
+[57/60] 处理: 4_9000_STR [mode1]
+
+================================================================================
+文件: 4_9000_STR.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_4_9000_STR_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_9000_STR.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_4_9000_STR_mode1_75_50
+================================================================================
+✅ 4_9000_STR.txt [mode1] 执行成功 (134.39s)
+💾 系统内存: 已用 1.8GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 3.2GB
+
+[58/60] 处理: 4_9000_STR [mode2]
+
+================================================================================
+文件: 4_9000_STR.txt
+模式: mode2
+输出: /SkyDB/skyagg_griddb_4_9000_STR_mode2_95_90
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_9000_STR.txt --mode mode2 --pi-avg 0.95 --pi-min 0.9 --export-prefix /SkyDB/skyagg_griddb_4_9000_STR_mode2_95_90
+================================================================================
+✅ 4_9000_STR.txt [mode2] 执行成功 (135.04s)
+💾 系统内存: 已用 1.7GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 3.2GB
+
+[59/60] 处理: 4_9000_VEH [mode1]
+
+================================================================================
+文件: 4_9000_VEH.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_4_9000_VEH_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_9000_VEH.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_4_9000_VEH_mode1_75_50
+================================================================================
+✅ 4_9000_VEH.txt [mode1] 执行成功 (66.80s)
+💾 系统内存: 已用 1.8GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 2.4GB
+
+[60/60] 处理: 4_9000_VEH [mode2]
+
+================================================================================
+文件: 4_9000_VEH.txt
+模式: mode2
+输出: /SkyDB/skyagg_griddb_4_9000_VEH_mode2_95_90
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_9000_VEH.txt --mode mode2 --pi-avg 0.95 --pi-min 0.9 --export-prefix /SkyDB/skyagg_griddb_4_9000_VEH_mode2_95_90
+================================================================================
+✅ 4_9000_VEH.txt [mode2] 执行成功 (83.15s)
+💾 系统内存: 已用 1.8GB / 总计 61.4GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 2.6GB
+
+================================================================================
+批量构建完成!
+================================================================================
+总任务数: 60
+成功: 60
+失败: 0
+
+📁 生成的文件:
+  - skyagg_griddb_4_1000_ANTI_mode1_75_50.pir.db (161.8 MB)
+  - skyagg_griddb_4_1000_ANTI_mode1_75_50.pir.meta.json (172.5 KB)
+  - skyagg_griddb_4_1000_ANTI_mode2_95_90.pir.db (161.8 MB)
+  - skyagg_griddb_4_1000_ANTI_mode2_95_90.pir.meta.json (172.5 KB)
+  - skyagg_griddb_4_1000_CORR_mode1_75_50.pir.db (130.1 MB)
+  - skyagg_griddb_4_1000_CORR_mode1_75_50.pir.meta.json (170.9 KB)
+  - skyagg_griddb_4_1000_CORR_mode2_95_90.pir.db (130.1 MB)
+  - skyagg_griddb_4_1000_CORR_mode2_95_90.pir.meta.json (170.9 KB)
+  - skyagg_griddb_4_1000_HOS_mode1_75_50.pir.db (80.5 MB)
+  - skyagg_griddb_4_1000_HOS_mode1_75_50.pir.meta.json (164.1 KB)
+  - skyagg_griddb_4_1000_HOS_mode2_95_90.pir.db (80.5 MB)
+  - skyagg_griddb_4_1000_HOS_mode2_95_90.pir.meta.json (164.1 KB)
+  - skyagg_griddb_4_1000_INDE_mode1_75_50.pir.db (146.7 MB)
+  - skyagg_griddb_4_1000_INDE_mode1_75_50.pir.meta.json (171.9 KB)
+  - skyagg_griddb_4_1000_INDE_mode2_95_90.pir.db (325.5 MB)
+  - skyagg_griddb_4_1000_INDE_mode2_95_90.pir.meta.json (180.3 KB)
+  - skyagg_griddb_4_1000_STR_mode1_75_50.pir.db (118.0 MB)
+  - skyagg_griddb_4_1000_STR_mode1_75_50.pir.meta.json (168.7 KB)
+  - skyagg_griddb_4_1000_STR_mode2_95_90.pir.db (118.0 MB)
+  - skyagg_griddb_4_1000_STR_mode2_95_90.pir.meta.json (168.7 KB)
+  - skyagg_griddb_4_1000_VEH_mode1_75_50.pir.db (72.3 MB)
+  - skyagg_griddb_4_1000_VEH_mode1_75_50.pir.meta.json (162.2 KB)
+  - skyagg_griddb_4_1000_VEH_mode2_95_90.pir.db (72.3 MB)
+  - skyagg_griddb_4_1000_VEH_mode2_95_90.pir.meta.json (162.2 KB)
+  - skyagg_griddb_4_3000_ANTI_mode1_75_50.pir.db (669.9 MB)
+  - skyagg_griddb_4_3000_ANTI_mode1_75_50.pir.meta.json (470.6 KB)
+  - skyagg_griddb_4_3000_ANTI_mode2_95_90.pir.db (669.9 MB)
+  - skyagg_griddb_4_3000_ANTI_mode2_95_90.pir.meta.json (470.6 KB)
+  - skyagg_griddb_4_3000_CORR_mode1_75_50.pir.db (481.8 MB)
+  - skyagg_griddb_4_3000_CORR_mode1_75_50.pir.meta.json (468.0 KB)
+  - skyagg_griddb_4_3000_CORR_mode2_95_90.pir.db (481.8 MB)
+  - skyagg_griddb_4_3000_CORR_mode2_95_90.pir.meta.json (468.0 KB)
+  - skyagg_griddb_4_3000_HOS_mode1_75_50.pir.db (378.8 MB)
+  - skyagg_griddb_4_3000_HOS_mode1_75_50.pir.meta.json (460.9 KB)
+  - skyagg_griddb_4_3000_HOS_mode2_95_90.pir.db (378.8 MB)
+  - skyagg_griddb_4_3000_HOS_mode2_95_90.pir.meta.json (460.9 KB)
+  - skyagg_griddb_4_3000_INDE_mode1_75_50.pir.db (685.5 MB)
+  - skyagg_griddb_4_3000_INDE_mode1_75_50.pir.meta.json (471.9 KB)
+  - skyagg_griddb_4_3000_INDE_mode2_95_90.pir.db (685.5 MB)
+  - skyagg_griddb_4_3000_INDE_mode2_95_90.pir.meta.json (471.9 KB)
+  - skyagg_griddb_4_3000_STR_mode1_75_50.pir.db (524.6 MB)
+  - skyagg_griddb_4_3000_STR_mode1_75_50.pir.meta.json (467.2 KB)
+  - skyagg_griddb_4_3000_STR_mode2_95_90.pir.db (524.6 MB)
+  - skyagg_griddb_4_3000_STR_mode2_95_90.pir.meta.json (467.2 KB)
+  - skyagg_griddb_4_3000_VEH_mode1_75_50.pir.db (265.0 MB)
+  - skyagg_griddb_4_3000_VEH_mode1_75_50.pir.meta.json (454.7 KB)
+  - skyagg_griddb_4_3000_VEH_mode2_95_90.pir.db (265.0 MB)
+  - skyagg_griddb_4_3000_VEH_mode2_95_90.pir.meta.json (454.7 KB)
+  - skyagg_griddb_4_5000_ANTI_mode1_75_50.pir.db (1087.3 MB)
+  - skyagg_griddb_4_5000_ANTI_mode1_75_50.pir.meta.json (757.9 KB)
+  - skyagg_griddb_4_5000_ANTI_mode2_95_90.pir.db (1087.3 MB)
+  - skyagg_griddb_4_5000_ANTI_mode2_95_90.pir.meta.json (757.9 KB)
+  - skyagg_griddb_4_5000_CORR_mode1_75_50.pir.db (812.0 MB)
+  - skyagg_griddb_4_5000_CORR_mode1_75_50.pir.meta.json (755.6 KB)
+  - skyagg_griddb_4_5000_CORR_mode2_95_90.pir.db (812.0 MB)
+  - skyagg_griddb_4_5000_CORR_mode2_95_90.pir.meta.json (755.6 KB)
+  - skyagg_griddb_4_5000_HOS_mode1_75_50.pir.db (672.8 MB)
+  - skyagg_griddb_4_5000_HOS_mode1_75_50.pir.meta.json (749.9 KB)
+  - skyagg_griddb_4_5000_HOS_mode2_95_90.pir.db (672.8 MB)
+  - skyagg_griddb_4_5000_HOS_mode2_95_90.pir.meta.json (749.9 KB)
+  - skyagg_griddb_4_5000_INDE_mode1_75_50.pir.db (998.5 MB)
+  - skyagg_griddb_4_5000_INDE_mode1_75_50.pir.meta.json (758.0 KB)
+  - skyagg_griddb_4_5000_INDE_mode2_95_90.pir.db (998.5 MB)
+  - skyagg_griddb_4_5000_INDE_mode2_95_90.pir.meta.json (758.0 KB)
+  - skyagg_griddb_4_5000_STR_mode1_75_50.pir.db (843.4 MB)
+  - skyagg_griddb_4_5000_STR_mode1_75_50.pir.meta.json (755.3 KB)
+  - skyagg_griddb_4_5000_STR_mode2_95_90.pir.db (843.4 MB)
+  - skyagg_griddb_4_5000_STR_mode2_95_90.pir.meta.json (755.3 KB)
+  - skyagg_griddb_4_5000_VEH_mode1_75_50.pir.db (421.3 MB)
+  - skyagg_griddb_4_5000_VEH_mode1_75_50.pir.meta.json (741.4 KB)
+  - skyagg_griddb_4_5000_VEH_mode2_95_90.pir.db (598.3 MB)
+  - skyagg_griddb_4_5000_VEH_mode2_95_90.pir.meta.json (744.7 KB)
+  - skyagg_griddb_4_7000_ANTI_mode1_75_50.pir.db (1330.4 MB)
+  - skyagg_griddb_4_7000_ANTI_mode1_75_50.pir.meta.json (1.0 MB)
+  - skyagg_griddb_4_7000_ANTI_mode2_95_90.pir.db (1330.4 MB)
+  - skyagg_griddb_4_7000_ANTI_mode2_95_90.pir.meta.json (1.0 MB)
+  - skyagg_griddb_4_7000_CORR_mode1_75_50.pir.db (942.8 MB)
+  - skyagg_griddb_4_7000_CORR_mode1_75_50.pir.meta.json (1.0 MB)
+  - skyagg_griddb_4_7000_CORR_mode2_95_90.pir.db (942.8 MB)
+  - skyagg_griddb_4_7000_CORR_mode2_95_90.pir.meta.json (1.0 MB)
+  - skyagg_griddb_4_7000_HOS_mode1_75_50.pir.db (970.8 MB)
+  - skyagg_griddb_4_7000_HOS_mode1_75_50.pir.meta.json (1.0 MB)
+  - skyagg_griddb_4_7000_HOS_mode2_95_90.pir.db (970.8 MB)
+  - skyagg_griddb_4_7000_HOS_mode2_95_90.pir.meta.json (1.0 MB)
+  - skyagg_griddb_4_7000_INDE_mode1_75_50.pir.db (1210.6 MB)
+  - skyagg_griddb_4_7000_INDE_mode1_75_50.pir.meta.json (1.0 MB)
+  - skyagg_griddb_4_7000_INDE_mode2_95_90.pir.db (1210.6 MB)
+  - skyagg_griddb_4_7000_INDE_mode2_95_90.pir.meta.json (1.0 MB)
+  - skyagg_griddb_4_7000_STR_mode1_75_50.pir.db (1066.0 MB)
+  - skyagg_griddb_4_7000_STR_mode1_75_50.pir.meta.json (1.0 MB)
+  - skyagg_griddb_4_7000_STR_mode2_95_90.pir.db (1066.0 MB)
+  - skyagg_griddb_4_7000_STR_mode2_95_90.pir.meta.json (1.0 MB)
+  - skyagg_griddb_4_7000_VEH_mode1_75_50.pir.db (551.0 MB)
+  - skyagg_griddb_4_7000_VEH_mode1_75_50.pir.meta.json (1.0 MB)
+  - skyagg_griddb_4_7000_VEH_mode2_95_90.pir.db (866.8 MB)
+  - skyagg_griddb_4_7000_VEH_mode2_95_90.pir.meta.json (1.0 MB)
+  - skyagg_griddb_4_9000_ANTI_mode1_75_50.pir.db (1630.9 MB)
+  - skyagg_griddb_4_9000_ANTI_mode1_75_50.pir.meta.json (1.3 MB)
+  - skyagg_griddb_4_9000_ANTI_mode2_95_90.pir.db (2021.2 MB)
+  - skyagg_griddb_4_9000_ANTI_mode2_95_90.pir.meta.json (1.3 MB)
+  - skyagg_griddb_4_9000_CORR_mode1_75_50.pir.db (1137.5 MB)
+  - skyagg_griddb_4_9000_CORR_mode1_75_50.pir.meta.json (1.3 MB)
+  - skyagg_griddb_4_9000_CORR_mode2_95_90.pir.db (1137.5 MB)
+  - skyagg_griddb_4_9000_CORR_mode2_95_90.pir.meta.json (1.3 MB)
+  - skyagg_griddb_4_9000_HOS_mode1_75_50.pir.db (1242.9 MB)
+  - skyagg_griddb_4_9000_HOS_mode1_75_50.pir.meta.json (1.3 MB)
+  - skyagg_griddb_4_9000_HOS_mode2_95_90.pir.db (1242.9 MB)
+  - skyagg_griddb_4_9000_HOS_mode2_95_90.pir.meta.json (1.3 MB)
+  - skyagg_griddb_4_9000_INDE_mode1_75_50.pir.db (1372.6 MB)
+  - skyagg_griddb_4_9000_INDE_mode1_75_50.pir.meta.json (1.3 MB)
+  - skyagg_griddb_4_9000_INDE_mode2_95_90.pir.db (1372.6 MB)
+  - skyagg_griddb_4_9000_INDE_mode2_95_90.pir.meta.json (1.3 MB)
+  - skyagg_griddb_4_9000_STR_mode1_75_50.pir.db (1277.2 MB)
+  - skyagg_griddb_4_9000_STR_mode1_75_50.pir.meta.json (1.3 MB)
+  - skyagg_griddb_4_9000_STR_mode2_95_90.pir.db (1277.2 MB)
+  - skyagg_griddb_4_9000_STR_mode2_95_90.pir.meta.json (1.3 MB)
+  - skyagg_griddb_4_9000_VEH_mode1_75_50.pir.db (675.7 MB)
+  - skyagg_griddb_4_9000_VEH_mode1_75_50.pir.meta.json (1.3 MB)
+  - skyagg_griddb_4_9000_VEH_mode2_95_90.pir.db (845.4 MB)
+  - skyagg_griddb_4_9000_VEH_mode2_95_90.pir.meta.json (1.3 MB)
+================================================================================
+📝 日志文件: logs/build_log_20260811_164106.txt
+
+📝 日志已保存到: logs/build_log_20260811_164106.txt

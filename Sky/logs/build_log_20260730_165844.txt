@@ -1,0 +1,128 @@
+================================================================================
+批量构建日志 - 2026-07-30 16:58:44
+================================================================================
+
+================================================================================
+批量构建 SkyAgg_GRID_DB (支持 mode1 和 mode2)
+================================================================================
+
+📁 找到 1 个txt文件:
+  - 1_100000_VEH.txt
+
+📊 总任务数: 3 (1 个文件 × 2 个模式 (共 1 + 2 个参数))
+
+
+[1/3] 处理: 1_100000_VEH [mode1]
+
+================================================================================
+文件: 1_100000_VEH.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_1_100000_VEH_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/1_100000_VEH.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_1_100000_VEH_mode1_75_50
+================================================================================
+
+[STDERR]
+Traceback (most recent call last):
+  File "/home/ecs-user/Sky/SkyAgg_GRID_DB.py", line 336, in read_points_from_txt
+    coords = tuple(float(x) for x in parts)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ecs-user/Sky/SkyAgg_GRID_DB.py", line 336, in <genexpr>
+    coords = tuple(float(x) for x in parts)
+                   ^^^^^^^^
+ValueError: could not convert string to float: 'scaled_longitude'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ecs-user/Sky/SkyAgg_GRID_DB.py", line 1814, in <module>
+    main()
+  File "/home/ecs-user/Sky/SkyAgg_GRID_DB.py", line 1737, in main
+    points = read_points_from_txt(args.data)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ecs-user/Sky/SkyAgg_GRID_DB.py", line 338, in read_points_from_txt
+    raise ValueError(f"Invalid numeric value at line {line_no}: {line}")
+ValueError: Invalid numeric value at line 1: scaled_longitude,scaled_latitude,1826
+
+❌ 1_100000_VEH.txt [mode1] 执行失败，返回码: 1 (0.05s)
+💾 系统内存: 已用 4.7GB / 总计 495.3GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 4.7GB
+
+[2/3] 处理: 1_100000_VEH [mode2]
+
+================================================================================
+文件: 1_100000_VEH.txt
+模式: mode2
+输出: /SkyDB/skyagg_griddb_1_100000_VEH_mode2_95_90
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/1_100000_VEH.txt --mode mode2 --pi-avg 0.95 --pi-min 0.9 --export-prefix /SkyDB/skyagg_griddb_1_100000_VEH_mode2_95_90
+================================================================================
+
+[STDERR]
+Traceback (most recent call last):
+  File "/home/ecs-user/Sky/SkyAgg_GRID_DB.py", line 336, in read_points_from_txt
+    coords = tuple(float(x) for x in parts)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ecs-user/Sky/SkyAgg_GRID_DB.py", line 336, in <genexpr>
+    coords = tuple(float(x) for x in parts)
+                   ^^^^^^^^
+ValueError: could not convert string to float: 'scaled_longitude'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ecs-user/Sky/SkyAgg_GRID_DB.py", line 1814, in <module>
+    main()
+  File "/home/ecs-user/Sky/SkyAgg_GRID_DB.py", line 1737, in main
+    points = read_points_from_txt(args.data)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ecs-user/Sky/SkyAgg_GRID_DB.py", line 338, in read_points_from_txt
+    raise ValueError(f"Invalid numeric value at line {line_no}: {line}")
+ValueError: Invalid numeric value at line 1: scaled_longitude,scaled_latitude,1826
+
+❌ 1_100000_VEH.txt [mode2] 执行失败，返回码: 1 (0.05s)
+💾 系统内存: 已用 4.7GB / 总计 495.3GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 4.7GB
+
+================================================================================
+批量构建完成!
+================================================================================
+总任务数: 3
+成功: 0
+失败: 2
+
+❌ 失败的任务:
+  ❌ 1_100000_VEH [mode1]
+  ❌ 1_100000_VEH [mode2]
+
+📁 生成的文件:
+  - skyagg_griddb_1_1000_ANTI_mode1_75_50.pir.db (92.5 MB)
+  - skyagg_griddb_1_1000_ANTI_mode1_75_50.pir.meta.json (150.4 KB)
+  - skyagg_griddb_1_1000_ANTI_mode2_95_90.pir.db (690.4 MB)
+  - skyagg_griddb_1_1000_ANTI_mode2_95_90.pir.meta.json (197.2 KB)
+  - skyagg_griddb_1_7000_ANTI_mode1_75_50.pir.db (4032.5 MB)
+  - skyagg_griddb_1_7000_ANTI_mode1_75_50.pir.meta.json (967.2 KB)
+  - skyagg_griddb_1_7000_ANTI_mode2_75_50.pir.db (4032.5 MB)
+  - skyagg_griddb_1_7000_ANTI_mode2_75_50.pir.meta.json (967.2 KB)
+  - skyagg_griddb_1_9000_ANTI_mode1_75_50.pir.db (5728.0 MB)
+  - skyagg_griddb_1_9000_ANTI_mode1_75_50.pir.meta.json (1.2 MB)
+  - skyagg_griddb_1_9000_ANTI_mode2_95_90.pir.db (39309.8 MB)
+  - skyagg_griddb_1_9000_ANTI_mode2_95_90.pir.meta.json (1.5 MB)
+  - skyagg_griddb_2_1000_ANTI_mode1_75_50.pir.db (182.1 MB)
+  - skyagg_griddb_2_1000_ANTI_mode1_75_50.pir.meta.json (165.9 KB)
+  - skyagg_griddb_2_1000_ANTI_mode2_95_90.pir.db (182.1 MB)
+  - skyagg_griddb_2_1000_ANTI_mode2_95_90.pir.meta.json (165.9 KB)
+  - skyagg_griddb_3_1000_ANTI_mode1_75_50.pir.db (284.4 MB)
+  - skyagg_griddb_3_1000_ANTI_mode1_75_50.pir.meta.json (181.4 KB)
+  - skyagg_griddb_3_1000_ANTI_mode2_95_90.pir.db (284.4 MB)
+  - skyagg_griddb_3_1000_ANTI_mode2_95_90.pir.meta.json (181.4 KB)
+  - skyagg_griddb_4_1000_ANTI_mode1_75_50.pir.db (376.1 MB)
+  - skyagg_griddb_4_1000_ANTI_mode1_75_50.pir.meta.json (197.0 KB)
+  - skyagg_griddb_4_1000_ANTI_mode2_95_90.pir.db (376.1 MB)
+  - skyagg_griddb_4_1000_ANTI_mode2_95_90.pir.meta.json (197.0 KB)
+  - skyagg_griddb_5_1000_ANTI_mode1_75_50.pir.db (501.5 MB)
+  - skyagg_griddb_5_1000_ANTI_mode1_75_50.pir.meta.json (212.5 KB)
+  - skyagg_griddb_5_1000_ANTI_mode2_95_90.pir.db (501.5 MB)
+  - skyagg_griddb_5_1000_ANTI_mode2_95_90.pir.meta.json (212.5 KB)
+================================================================================
+📝 日志文件: logs/build_log_20260730_165844.txt

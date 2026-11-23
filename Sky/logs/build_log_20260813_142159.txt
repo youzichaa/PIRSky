@@ -1,0 +1,193 @@
+================================================================================
+批量构建日志 - 2026-08-13 14:21:59
+================================================================================
+
+================================================================================
+批量构建 SkyAgg_GRID_DB (支持 mode1 和 mode2)
+================================================================================
+
+📁 找到 4 个txt文件:
+  - 2_1000000_ANTI.txt
+  - 2_1000000_CORR.txt
+  - 2_1000000_INDE.txt
+  - 2_1000000_STR.txt
+
+📊 总任务数: 8 (4 个文件 × 2 个模式 (共 1 + 1 个参数))
+
+
+[1/8] 处理: 2_1000000_ANTI [mode1]
+
+================================================================================
+文件: 2_1000000_ANTI.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_2_1000000_ANTI_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/2_1000000_ANTI.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_2_1000000_ANTI_mode1_75_50
+================================================================================
+
+[STDOUT]
+Loaded 1000000 points from ./data/dataset/2_1000000_ANTI.txt
+Expected cols=1000, rows=1000, cells=1000000
+NE-Quadrant column scan/merge/compact time: 2007113.36 ms (released 0 stale masks)
+NW-Quadrant column scan/merge/compact time: 2247340.35 ms (released 718586 stale masks)
+SW-Quadrant column scan/merge/compact time: 2058847.49 ms (released 476809 stale masks)
+SE-Quadrant column scan/merge/compact time: 2412291.92 ms (released 997998 stale masks)
+GlobalFineGrid live unique mask count: 999252
+
+Global fine-grid construction time: 8843382.43 ms
+
+Global FineGrid after streaming merge NE/NW/SW/SE
+  cols=1000, rows=1000, cells=1000000
+  avg_size=784.84, max_size=1595
+  unique_mask_count=999252
+
+Boundary weight computation time: 232481.13 ms
+
+Recommended parameters on GlobalFineGrid:
+  target_cols=316, target_rows=317
+  target_grid_cells=100000
+  achieved_compression=9.98
+  total_precision=0.75, cell_precision=0.50
+  max_total_error=261613827
+  max_cell_error=1154
+
+build_coarse_grid_by_direct time: 126497.55 ms
+
+Final Global GRID (mode1)
+  cols=316, rows=317, cells=100172
+  total_positive_error=215220495
+  max_cell_extra=1712
+  avg_candidate_size=827.48, max_candidate_size=2215
+  avg_candidate_size_weighted_by_fine_cell=1000.06
+  unique_mask_count=100173
+
+Exported GRID database for Piano-PIR:
+  DB file      : /SkyDB/skyagg_griddb_2_1000000_ANTI_mode1_75_50.pir.db
+  metadata     : /SkyDB/skyagg_griddb_2_1000000_ANTI_mode1_75_50.pir.meta.json
+  DB records   : 100172
+  one query -> one PIR index -> one full skyline record
+
+✅ 2_1000000_ANTI.txt [mode1] 执行成功 (12539.49s)
+💾 系统内存: 已用 2.8GB / 总计 247.2GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 193.4GB
+
+[2/8] 处理: 2_1000000_CORR [mode1]
+
+================================================================================
+文件: 2_1000000_CORR.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_2_1000000_CORR_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/2_1000000_CORR.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_2_1000000_CORR_mode1_75_50
+================================================================================
+
+[STDOUT]
+Loaded 1000000 points from ./data/dataset/2_1000000_CORR.txt
+Expected cols=1000, rows=1000, cells=1000000
+NE-Quadrant column scan/merge/compact time: 3232505.43 ms (released 0 stale masks)
+NW-Quadrant column scan/merge/compact time: 3212220.72 ms (released 785524 stale masks)
+SW-Quadrant column scan/merge/compact time: 3366050.62 ms (released 852546 stale masks)
+SE-Quadrant column scan/merge/compact time: 3286433.64 ms (released 982801 stale masks)
+GlobalFineGrid live unique mask count: 996022
+
+Global fine-grid construction time: 13225179.89 ms
+
+Global FineGrid after streaming merge NE/NW/SW/SE
+  cols=1000, rows=1000, cells=1000000
+  avg_size=716.85, max_size=1064
+  unique_mask_count=996022
+
+Boundary weight computation time: 232366.77 ms
+
+Recommended parameters on GlobalFineGrid:
+  target_cols=316, target_rows=317
+  target_grid_cells=100000
+  achieved_compression=9.98
+  total_precision=0.75, cell_precision=0.50
+  max_total_error=238950566
+  max_cell_error=829
+
+build_coarse_grid_by_direct time: 121463.10 ms
+
+Final Global GRID (mode1)
+  cols=316, rows=317, cells=100172
+  total_positive_error=294532559
+  max_cell_extra=2415
+  avg_candidate_size=838.13, max_candidate_size=2496
+  avg_candidate_size_weighted_by_fine_cell=1011.38
+  unique_mask_count=100173
+
+Exported GRID database for Piano-PIR:
+  DB file      : /SkyDB/skyagg_griddb_2_1000000_CORR_mode1_75_50.pir.db
+  metadata     : /SkyDB/skyagg_griddb_2_1000000_CORR_mode1_75_50.pir.meta.json
+  DB records   : 100172
+  one query -> one PIR index -> one full skyline record
+
+✅ 2_1000000_CORR.txt [mode1] 执行成功 (16891.72s)
+💾 系统内存: 已用 2.8GB / 总计 247.2GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 190.2GB
+
+[3/8] 处理: 2_1000000_INDE [mode1]
+
+================================================================================
+文件: 2_1000000_INDE.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_2_1000000_INDE_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/2_1000000_INDE.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_2_1000000_INDE_mode1_75_50
+================================================================================
+
+[STDOUT]
+Loaded 1000000 points from ./data/dataset/2_1000000_INDE.txt
+Expected cols=1000, rows=1000, cells=1000000
+NE-Quadrant column scan/merge/compact time: 5240996.74 ms (released 0 stale masks)
+NW-Quadrant column scan/merge/compact time: 5368939.50 ms (released 996896 stale masks)
+SW-Quadrant column scan/merge/compact time: 5548432.25 ms (released 994707 stale masks)
+SE-Quadrant column scan/merge/compact time: 5604112.98 ms (released 997998 stale masks)
+GlobalFineGrid live unique mask count: 1000001
+
+Global fine-grid construction time: 21907419.04 ms
+
+Global FineGrid after streaming merge NE/NW/SW/SE
+  cols=1000, rows=1000, cells=1000000
+  avg_size=798.35, max_size=1159
+  unique_mask_count=1000001
+
+Boundary weight computation time: 232570.14 ms
+
+Recommended parameters on GlobalFineGrid:
+  target_cols=316, target_rows=317
+  target_grid_cells=100000
+  achieved_compression=9.98
+  total_precision=0.75, cell_precision=0.50
+  max_total_error=266115415
+  max_cell_error=928
+
+build_coarse_grid_by_direct time: 118485.83 ms
+
+Final Global GRID (mode1)
+  cols=316, rows=317, cells=100172
+  total_positive_error=295783471
+  max_cell_extra=1447
+  avg_candidate_size=913.63, max_candidate_size=2311
+  avg_candidate_size_weighted_by_fine_cell=1094.13
+  unique_mask_count=100173
+
+Exported GRID database for Piano-PIR:
+  DB file      : /SkyDB/skyagg_griddb_2_1000000_INDE_mode1_75_50.pir.db
+  metadata     : /SkyDB/skyagg_griddb_2_1000000_INDE_mode1_75_50.pir.meta.json
+  DB records   : 100172
+  one query -> one PIR index -> one full skyline record
+
+✅ 2_1000000_INDE.txt [mode1] 执行成功 (25846.03s)
+💾 系统内存: 已用 2.9GB / 总计 247.2GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 191.5GB
+
+[4/8] 处理: 2_1000000_STR [mode1]
+
+================================================================================
+文件: 2_1000000_STR.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_2_1000000_STR_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/2_1000000_STR.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_2_1000000_STR_mode1_75_50
+================================================================================

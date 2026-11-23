@@ -1,0 +1,9 @@
+go run tutorial_griddb_metrics.go -db /SkyDB/skyagg_griddb_1_1000_ANTI_mode1_75_50.pir.db -meta /SkyDB/skyagg_griddb_1_1000_ANTI_mode1_75_50.pir.meta.json -index 20 -metrics-json piano_metrics_1_1000_ANTI_mode1_75_50.json
+
+chmod +x run_go_batch.sh
+./run_go_batch.sh
+nohup ./run_go_batch.sh > batch.log 2>&1 &
+
+ls -1 *.json 2>/dev/null | wc -l
+zip meta_.zip *.json
+zip -r cost_.zip ./cost

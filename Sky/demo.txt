@@ -1,0 +1,58 @@
+2维： 1K ~ 11K
+n=1000： 1 ~ 5维静态
+
+nohup /home/ecs-user/Sky/venv/bin/python -u batch_build.py > log.txt 2>&1 &
+
+python SkyAgg_GRID_DB.py build --mode mode2
+
+python SkyAgg_GRID_DB.py build --data ./data/dataset/1_1000_ANTI.txt --mode mode1
+
+python SkyAgg_GRID_DB_Piano.py build --data points.txt --mode mode2 --compression 10
+--min-cols 10  --min-rows 10  --query 2 1  --export-prefix ./out/skyagg_griddb
+
+python SkyAgg_GRID_DB_Piano.py locate --meta ./out/skyagg_griddb.pir.meta.json
+--query 2 1 --out ./out/query_2_1.json
+
+python SkyAgg_GRID_DB_Piano.py decode --db ./out/skyagg_griddb.pir.db
+--meta ./out/skyagg_griddb.pir.meta.json --index 4
+
+ /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_100000_HOS.txt --mode mode2 --pi-avg 0.95 --pi-min 0.9 --export-prefix /SkyDB/skyagg_griddb_4_100000_HOS_mode2_95_90
+
+go build -o piano_tutorial tutorial_new.go
+./piano_tutorial   -db skyagg_griddb.pir.db   -meta skyagg_griddb.pir.meta.json   -index 11   -verbose
+
+go run piano_griddb_query_standalone.go \
+  -db ./out/skyagg_griddb.pir.db \
+  -meta ./out/skyagg_griddb.pir.meta.json \
+  -query-json ./out/query_2_1.json
+
+go run piano_griddb_query_standalone.go -db skyagg_griddb.pir.db -meta skyagg_griddb.pir.meta.json -index 7
+
+
+go run ./tutorial_griddb -db ./skyagg_griddb.pir.db -meta ./skyagg_griddb.pir.meta.json  -query-json ./out/query_2_1.json
+
+points.result
+1       1234    1234    13
+1234    1234    1234    13
+1234    1234    1234    23
+123     123     123     23
+
+ps aux | grep batch_build.py
+kill -9
+
+df -h /SkyDB
+mount | grep /SkyDB/
+sudo vim /etc/fstab
+
+sudo mkfs.ext4 /dev/XXX
+sudo mount -a
+lsblk
+sudo mount /dev/nvme0n1p1 /SkyDB
+df -h
+
+sudo vim /etc/fstab
+lsblk -f
+
+看公网和本地IP是否改变，ssh是否开启
+systemctl status sshd
+sudo systemctl restart sshd

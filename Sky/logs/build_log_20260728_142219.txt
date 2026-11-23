@@ -1,0 +1,836 @@
+================================================================================
+批量构建日志 - 2026-07-28 14:22:19
+================================================================================
+
+================================================================================
+批量构建 SkyAgg_GRID_DB (支持 mode1 和 mode2)
+================================================================================
+
+📁 找到 6 个txt文件:
+  - 1_1000_ANTI.txt
+  - 1_9000_ANTI.txt
+  - 2_1000_ANTI.txt
+  - 3_1000_ANTI.txt
+  - 4_1000_ANTI.txt
+  - 5_1000_ANTI.txt
+
+📊 总任务数: 18 (6 个文件 × 2 个模式 (共 1 + 2 个参数))
+
+
+[1/18] 处理: 1_1000_ANTI [mode1]
+
+================================================================================
+文件: 1_1000_ANTI.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_1_1000_ANTI_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/1_1000_ANTI.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_1_1000_ANTI_mode1_75_50
+================================================================================
+
+[STDOUT]
+Loaded 1000 points from ./data/dataset/1_1000_ANTI.txt
+Expected cols=958, rows=958, cells=917764
+NE-Quadrant column scan/merge/compact time: 918.19 ms (released 0 stale masks)
+NW-Quadrant column scan/merge/compact time: 1344.35 ms (released 415921 stale masks)
+SW-Quadrant column scan/merge/compact time: 1033.42 ms (released 76471 stale masks)
+SE-Quadrant column scan/merge/compact time: 1305.22 ms (released 483099 stale masks)
+GlobalFineGrid live unique mask count: 248921
+
+Global fine-grid construction time: 4883.10 ms
+
+Global FineGrid after streaming merge NE/NW/SW/SE
+  cols=958, rows=958, cells=917764
+  avg_size=64.13, max_size=131
+  unique_mask_count=248921
+
+Boundary weight computation time: 1606.99 ms
+
+Recommended parameters on GlobalFineGrid:
+  target_cols=303, target_rows=303
+  target_grid_cells=91777
+  achieved_compression=10.00
+  total_precision=0.75, cell_precision=0.50
+  max_total_error=19619519
+  max_cell_error=92
+
+build_coarse_grid_by_direct time: 546.75 ms
+
+Final Global GRID (mode1)
+  cols=303, rows=303, cells=91809
+  total_positive_error=1905743
+  max_cell_extra=33
+  avg_candidate_size=63.03, max_candidate_size=131
+  avg_candidate_size_weighted_by_fine_cell=66.21
+  unique_mask_count=83856
+
+Exported GRID database for Piano-PIR:
+  DB file      : /SkyDB/skyagg_griddb_1_1000_ANTI_mode1_75_50.pir.db
+  metadata     : /SkyDB/skyagg_griddb_1_1000_ANTI_mode1_75_50.pir.meta.json
+  DB records   : 91809
+  one query -> one PIR index -> one full skyline record
+
+✅ 1_1000_ANTI.txt [mode1] 执行成功 (10.42s)
+💾 系统内存: 已用 3.7GB / 总计 247.2GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 3.7GB
+
+[2/18] 处理: 1_1000_ANTI [mode2]
+
+================================================================================
+文件: 1_1000_ANTI.txt
+模式: mode2
+输出: /SkyDB/skyagg_griddb_1_1000_ANTI_mode2_95_90
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/1_1000_ANTI.txt --mode mode2 --pi-avg 0.95 --pi-min 0.9 --export-prefix /SkyDB/skyagg_griddb_1_1000_ANTI_mode2_95_90
+================================================================================
+
+[STDOUT]
+Loaded 1000 points from ./data/dataset/1_1000_ANTI.txt
+Expected cols=958, rows=958, cells=917764
+NE-Quadrant column scan/merge/compact time: 919.73 ms (released 0 stale masks)
+NW-Quadrant column scan/merge/compact time: 1337.36 ms (released 415921 stale masks)
+SW-Quadrant column scan/merge/compact time: 1030.64 ms (released 76471 stale masks)
+SE-Quadrant column scan/merge/compact time: 1302.37 ms (released 483099 stale masks)
+GlobalFineGrid live unique mask count: 248921
+
+Global fine-grid construction time: 4856.31 ms
+
+Global FineGrid after streaming merge NE/NW/SW/SE
+  cols=958, rows=958, cells=917764
+  avg_size=64.13, max_size=131
+  unique_mask_count=248921
+
+Boundary weight computation time: 1617.71 ms
+
+Recommended parameters on GlobalFineGrid:
+  target_cols=303, target_rows=303
+  target_grid_cells=91777
+  achieved_compression=10.00
+  total_precision=0.95, cell_precision=0.90
+  max_total_error=3097818
+  max_cell_error=10
+
+build_coarse_grid_by_direct time: 548.27 ms
+
+Mode 2 initial TopWeight grid (mode1)
+  cols=303, rows=303, cells=91809
+  total_positive_error=1905743
+  max_cell_extra=33
+  avg_candidate_size=63.03, max_candidate_size=131
+  avg_candidate_size_weighted_by_fine_cell=66.21
+  unique_mask_count=83856
+
+Mode 2 budget check:
+  initial TopWeight grid violates the error budgets
+  total_positive_error=1905743, max_total_error=3097818
+  max_cell_extra=33, max_cell_error=10
+  start binary search for a finer grid
+  iter=1, target_cells=504787, cols=712, rows=709, actual_cells=504808, total_error=32346, max_extra=27, ok=False
+  iter=2, target_cells=711286, cols=845, rows=842, actual_cells=711490, total_error=1286, max_extra=7, ok=True
+  iter=3, target_cells=608149, cols=781, rows=779, actual_cells=608399, total_error=8668, max_extra=27, ok=False
+  iter=4, target_cells=659944, cols=814, rows=811, actual_cells=660154, total_error=3647, max_extra=19, ok=False
+  iter=5, target_cells=685822, cols=830, rows=827, actual_cells=686410, total_error=2230, max_extra=9, ok=True
+  iter=6, target_cells=673282, cols=822, rows=820, actual_cells=674040, total_error=2817, max_extra=19, ok=False
+  iter=7, target_cells=680225, cols=826, rows=824, actual_cells=680624, total_error=2498, max_extra=19, ok=False
+  iter=8, target_cells=683517, cols=828, rows=826, actual_cells=683928, total_error=2348, max_extra=19, ok=False
+  iter=9, target_cells=685169, cols=829, rows=827, actual_cells=685583, total_error=2284, max_extra=9, ok=True
+
+build_grid_by_mixed time: 9719.33 ms
+
+Final Global GRID (mode2)
+  cols=829, rows=827, cells=685583
+  total_positive_error=2284
+  max_cell_extra=9
+  avg_candidate_size=63.59, max_candidate_size=131
+  avg_candidate_size_weighted_by_fine_cell=64.14
+  unique_mask_count=248371
+
+Exported GRID database for Piano-PIR:
+  DB file      : /SkyDB/skyagg_griddb_1_1000_ANTI_mode2_95_90.pir.db
+  metadata     : /SkyDB/skyagg_griddb_1_1000_ANTI_mode2_95_90.pir.meta.json
+  DB records   : 685583
+  one query -> one PIR index -> one full skyline record
+
+✅ 1_1000_ANTI.txt [mode2] 执行成功 (40.43s)
+💾 系统内存: 已用 3.6GB / 总计 247.2GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 3.8GB
+
+[3/18] 处理: 1_9000_ANTI [mode1]
+
+================================================================================
+文件: 1_9000_ANTI.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_1_9000_ANTI_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/1_9000_ANTI.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_1_9000_ANTI_mode1_75_50
+================================================================================
+
+[STDOUT]
+Loaded 9000 points from ./data/dataset/1_9000_ANTI.txt
+Expected cols=5840, rows=5788, cells=33801920
+NE-Quadrant column scan/merge/compact time: 88241.74 ms (released 0 stale masks)
+NW-Quadrant column scan/merge/compact time: 126497.07 ms (released 16041726 stale masks)
+SW-Quadrant column scan/merge/compact time: 107979.10 ms (released 4612060 stale masks)
+SE-Quadrant column scan/merge/compact time: 133791.88 ms (released 20116684 stale masks)
+GlobalFineGrid live unique mask count: 11307057
+
+Global fine-grid construction time: 503089.08 ms
+
+Global FineGrid after streaming merge NE/NW/SW/SE
+  cols=5840, rows=5788, cells=33801920
+  avg_size=114.38, max_size=220
+  unique_mask_count=11307057
+
+Boundary weight computation time: 125014.18 ms
+
+Recommended parameters on GlobalFineGrid:
+  target_cols=1846, target_rows=1832
+  target_grid_cells=3380192
+  achieved_compression=10.00
+  total_precision=0.75, cell_precision=0.50
+  max_total_error=1288711655
+  max_cell_error=156
+
+build_coarse_grid_by_direct time: 51500.63 ms
+
+Final Global GRID (mode1)
+  cols=1846, rows=1832, cells=3381872
+  total_positive_error=102616219
+  max_cell_extra=53
+  avg_candidate_size=112.75, max_candidate_size=221
+  avg_candidate_size_weighted_by_fine_cell=117.41
+  unique_mask_count=3159238
+
+Exported GRID database for Piano-PIR:
+  DB file      : /SkyDB/skyagg_griddb_1_9000_ANTI_mode1_75_50.pir.db
+  metadata     : /SkyDB/skyagg_griddb_1_9000_ANTI_mode1_75_50.pir.meta.json
+  DB records   : 3381872
+  one query -> one PIR index -> one full skyline record
+
+✅ 1_9000_ANTI.txt [mode1] 执行成功 (1051.40s)
+💾 系统内存: 已用 3.0GB / 总计 247.2GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 35.4GB
+
+[4/18] 处理: 1_9000_ANTI [mode2]
+
+================================================================================
+文件: 1_9000_ANTI.txt
+模式: mode2
+输出: /SkyDB/skyagg_griddb_1_9000_ANTI_mode2_95_90
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/1_9000_ANTI.txt --mode mode2 --pi-avg 0.95 --pi-min 0.9 --export-prefix /SkyDB/skyagg_griddb_1_9000_ANTI_mode2_95_90
+================================================================================
+
+[STDOUT]
+Loaded 9000 points from ./data/dataset/1_9000_ANTI.txt
+Expected cols=5840, rows=5788, cells=33801920
+NE-Quadrant column scan/merge/compact time: 87343.86 ms (released 0 stale masks)
+NW-Quadrant column scan/merge/compact time: 128190.30 ms (released 16041726 stale masks)
+SW-Quadrant column scan/merge/compact time: 108099.00 ms (released 4612060 stale masks)
+SE-Quadrant column scan/merge/compact time: 134579.85 ms (released 20116684 stale masks)
+GlobalFineGrid live unique mask count: 11307057
+
+Global fine-grid construction time: 505242.17 ms
+
+Global FineGrid after streaming merge NE/NW/SW/SE
+  cols=5840, rows=5788, cells=33801920
+  avg_size=114.38, max_size=220
+  unique_mask_count=11307057
+
+Boundary weight computation time: 125185.47 ms
+
+Recommended parameters on GlobalFineGrid:
+  target_cols=1846, target_rows=1832
+  target_grid_cells=3380192
+  achieved_compression=10.00
+  total_precision=0.95, cell_precision=0.90
+  max_total_error=203480787
+  max_cell_error=17
+
+build_coarse_grid_by_direct time: 51648.01 ms
+
+Mode 2 initial TopWeight grid (mode1)
+  cols=1846, rows=1832, cells=3381872
+  total_positive_error=102616219
+  max_cell_extra=53
+  avg_candidate_size=112.75, max_candidate_size=221
+  avg_candidate_size_weighted_by_fine_cell=117.41
+  unique_mask_count=3159238
+
+Mode 2 budget check:
+  initial TopWeight grid violates the error budgets
+  total_positive_error=102616219, max_total_error=203480787
+  max_cell_extra=53, max_cell_error=17
+  start binary search for a finer grid
+  iter=1, target_cells=18591896, cols=4329, rows=4295, actual_cells=18593055, total_error=2224378, max_extra=32, ok=False
+  iter=2, target_cells=26197488, cols=5138, rows=5099, actual_cells=26198662, total_error=140613, max_extra=16, ok=True
+  iter=3, target_cells=22395858, cols=4751, rows=4714, actual_cells=22396214, total_error=685272, max_extra=23, ok=False
+  iter=4, target_cells=24297438, cols=4948, rows=4911, actual_cells=24299628, total_error=335976, max_extra=16, ok=True
+  iter=5, target_cells=23347921, cols=4851, rows=4814, actual_cells=23352714, total_error=485875, max_extra=16, ok=True
+  iter=6, target_cells=22874464, cols=4801, rows=4765, actual_cells=22876765, total_error=577025, max_extra=23, ok=False
+  iter=7, target_cells=23114739, cols=4826, rows=4790, actual_cells=23116540, total_error=531060, max_extra=23, ok=False
+  iter=8, target_cells=23234627, cols=4839, rows=4802, actual_cells=23236878, total_error=507873, max_extra=23, ok=False
+  iter=9, target_cells=23294796, cols=4845, rows=4809, actual_cells=23299605, total_error=494782, max_extra=23, ok=False
+  iter=10, target_cells=23326159, cols=4848, rows=4812, actual_cells=23328576, total_error=490258, max_extra=16, ok=True
+  iter=11, target_cells=23314090, cols=4847, rows=4811, actual_cells=23318917, total_error=491745, max_extra=16, ok=True
+  iter=12, target_cells=23309261, cols=4847, rows=4810, actual_cells=23314070, total_error=492632, max_extra=16, ok=True
+  iter=13, target_cells=23306837, cols=4846, rows=4810, actual_cells=23309260, total_error=493300, max_extra=23, ok=False
+
+build_grid_by_mixed time: 1065840.26 ms
+
+Final Global GRID (mode2)
+  cols=4847, rows=4810, cells=23314070
+  total_positive_error=492632
+  max_cell_extra=16
+  avg_candidate_size=113.49, max_candidate_size=220
+  avg_candidate_size_weighted_by_fine_cell=114.39
+  unique_mask_count=11181987
+
+Exported GRID database for Piano-PIR:
+  DB file      : /SkyDB/skyagg_griddb_1_9000_ANTI_mode2_95_90.pir.db
+  metadata     : /SkyDB/skyagg_griddb_1_9000_ANTI_mode2_95_90.pir.meta.json
+  DB records   : 23314070
+  one query -> one PIR index -> one full skyline record
+
+✅ 1_9000_ANTI.txt [mode2] 执行成功 (3824.95s)
+💾 系统内存: 已用 3.1GB / 总计 247.2GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 47.9GB
+
+[5/18] 处理: 2_1000_ANTI [mode1]
+
+================================================================================
+文件: 2_1000_ANTI.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_2_1000_ANTI_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/2_1000_ANTI.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_2_1000_ANTI_mode1_75_50
+================================================================================
+
+[STDOUT]
+Loaded 1000 points from ./data/dataset/2_1000_ANTI.txt
+Expected cols=958, rows=958, cells=917764
+NE-Quadrant column scan/merge/compact time: 921.13 ms (released 0 stale masks)
+NW-Quadrant column scan/merge/compact time: 1353.47 ms (released 415925 stale masks)
+SW-Quadrant column scan/merge/compact time: 1018.94 ms (released 64384 stale masks)
+SE-Quadrant column scan/merge/compact time: 1130.29 ms (released 407094 stale masks)
+GlobalFineGrid live unique mask count: 170606
+
+Global fine-grid construction time: 4684.47 ms
+
+Global FineGrid after streaming merge NE/NW/SW/SE
+  cols=958, rows=958, cells=917764
+  avg_size=146.87, max_size=259
+  unique_mask_count=170606
+
+Boundary weight computation time: 1590.54 ms
+
+Recommended parameters on GlobalFineGrid:
+  target_cols=303, target_rows=303
+  target_grid_cells=91777
+  achieved_compression=10.00
+  total_precision=0.75, cell_precision=0.50
+  max_total_error=44929769
+  max_cell_error=198
+
+build_coarse_grid_by_direct time: 535.79 ms
+
+Final Global GRID (mode1)
+  cols=303, rows=303, cells=91809
+  total_positive_error=1104828
+  max_cell_extra=19
+  avg_candidate_size=144.96, max_candidate_size=259
+  avg_candidate_size_weighted_by_fine_cell=148.07
+  unique_mask_count=77427
+
+Exported GRID database for Piano-PIR:
+  DB file      : /SkyDB/skyagg_griddb_2_1000_ANTI_mode1_75_50.pir.db
+  metadata     : /SkyDB/skyagg_griddb_2_1000_ANTI_mode1_75_50.pir.meta.json
+  DB records   : 91809
+  one query -> one PIR index -> one full skyline record
+
+✅ 2_1000_ANTI.txt [mode1] 执行成功 (13.02s)
+💾 系统内存: 已用 3.2GB / 总计 247.2GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 3.3GB
+
+[6/18] 处理: 2_1000_ANTI [mode2]
+
+================================================================================
+文件: 2_1000_ANTI.txt
+模式: mode2
+输出: /SkyDB/skyagg_griddb_2_1000_ANTI_mode2_95_90
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/2_1000_ANTI.txt --mode mode2 --pi-avg 0.95 --pi-min 0.9 --export-prefix /SkyDB/skyagg_griddb_2_1000_ANTI_mode2_95_90
+================================================================================
+
+[STDOUT]
+Loaded 1000 points from ./data/dataset/2_1000_ANTI.txt
+Expected cols=958, rows=958, cells=917764
+NE-Quadrant column scan/merge/compact time: 913.27 ms (released 0 stale masks)
+NW-Quadrant column scan/merge/compact time: 1327.48 ms (released 415925 stale masks)
+SW-Quadrant column scan/merge/compact time: 1012.58 ms (released 64384 stale masks)
+SE-Quadrant column scan/merge/compact time: 1116.51 ms (released 407094 stale masks)
+GlobalFineGrid live unique mask count: 170606
+
+Global fine-grid construction time: 4623.55 ms
+
+Global FineGrid after streaming merge NE/NW/SW/SE
+  cols=958, rows=958, cells=917764
+  avg_size=146.87, max_size=259
+  unique_mask_count=170606
+
+Boundary weight computation time: 1595.90 ms
+
+Recommended parameters on GlobalFineGrid:
+  target_cols=303, target_rows=303
+  target_grid_cells=91777
+  achieved_compression=10.00
+  total_precision=0.95, cell_precision=0.90
+  max_total_error=7094174
+  max_cell_error=22
+
+build_coarse_grid_by_direct time: 537.40 ms
+
+Mode 2 initial TopWeight grid (mode1)
+  cols=303, rows=303, cells=91809
+  total_positive_error=1104828
+  max_cell_extra=19
+  avg_candidate_size=144.96, max_candidate_size=259
+  avg_candidate_size_weighted_by_fine_cell=148.07
+  unique_mask_count=77427
+
+Mode 2 budget check:
+  initial TopWeight grid already satisfies the error budgets, Mode 2 equals Mode 1
+
+build_grid_by_mixed time: 575.21 ms
+
+Final Global GRID (mode2)
+  cols=303, rows=303, cells=91809
+  total_positive_error=1104828
+  max_cell_extra=19
+  avg_candidate_size=144.96, max_candidate_size=259
+  avg_candidate_size_weighted_by_fine_cell=148.07
+  unique_mask_count=77427
+
+Exported GRID database for Piano-PIR:
+  DB file      : /SkyDB/skyagg_griddb_2_1000_ANTI_mode2_95_90.pir.db
+  metadata     : /SkyDB/skyagg_griddb_2_1000_ANTI_mode2_95_90.pir.meta.json
+  DB records   : 91809
+  one query -> one PIR index -> one full skyline record
+
+✅ 2_1000_ANTI.txt [mode2] 执行成功 (13.08s)
+💾 系统内存: 已用 3.3GB / 总计 247.2GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 3.4GB
+
+[7/18] 处理: 3_1000_ANTI [mode1]
+
+================================================================================
+文件: 3_1000_ANTI.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_3_1000_ANTI_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/3_1000_ANTI.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_3_1000_ANTI_mode1_75_50
+================================================================================
+
+[STDOUT]
+Loaded 1000 points from ./data/dataset/3_1000_ANTI.txt
+Expected cols=958, rows=958, cells=917764
+NE-Quadrant column scan/merge/compact time: 910.75 ms (released 0 stale masks)
+NW-Quadrant column scan/merge/compact time: 1341.13 ms (released 415925 stale masks)
+SW-Quadrant column scan/merge/compact time: 998.00 ms (released 53329 stale masks)
+SE-Quadrant column scan/merge/compact time: 1141.20 ms (released 344615 stale masks)
+GlobalFineGrid live unique mask count: 117544
+
+Global fine-grid construction time: 4615.35 ms
+
+Global FineGrid after streaming merge NE/NW/SW/SE
+  cols=958, rows=958, cells=917764
+  avg_size=248.32, max_size=404
+  unique_mask_count=117544
+
+Boundary weight computation time: 1597.74 ms
+
+Recommended parameters on GlobalFineGrid:
+  target_cols=303, target_rows=303
+  target_grid_cells=91777
+  achieved_compression=10.00
+  total_precision=0.75, cell_precision=0.50
+  max_total_error=75965331
+  max_cell_error=348
+
+build_coarse_grid_by_direct time: 526.33 ms
+
+Final Global GRID (mode1)
+  cols=303, rows=303, cells=91809
+  total_positive_error=616526
+  max_cell_extra=21
+  avg_candidate_size=244.45, max_candidate_size=405
+  avg_candidate_size_weighted_by_fine_cell=248.99
+  unique_mask_count=70924
+
+Exported GRID database for Piano-PIR:
+  DB file      : /SkyDB/skyagg_griddb_3_1000_ANTI_mode1_75_50.pir.db
+  metadata     : /SkyDB/skyagg_griddb_3_1000_ANTI_mode1_75_50.pir.meta.json
+  DB records   : 91809
+  one query -> one PIR index -> one full skyline record
+
+✅ 3_1000_ANTI.txt [mode1] 执行成功 (16.31s)
+💾 系统内存: 已用 3.3GB / 总计 247.2GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 3.4GB
+
+[8/18] 处理: 3_1000_ANTI [mode2]
+
+================================================================================
+文件: 3_1000_ANTI.txt
+模式: mode2
+输出: /SkyDB/skyagg_griddb_3_1000_ANTI_mode2_95_90
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/3_1000_ANTI.txt --mode mode2 --pi-avg 0.95 --pi-min 0.9 --export-prefix /SkyDB/skyagg_griddb_3_1000_ANTI_mode2_95_90
+================================================================================
+
+[STDOUT]
+Loaded 1000 points from ./data/dataset/3_1000_ANTI.txt
+Expected cols=958, rows=958, cells=917764
+NE-Quadrant column scan/merge/compact time: 902.46 ms (released 0 stale masks)
+NW-Quadrant column scan/merge/compact time: 1336.81 ms (released 415925 stale masks)
+SW-Quadrant column scan/merge/compact time: 996.96 ms (released 53329 stale masks)
+SE-Quadrant column scan/merge/compact time: 1137.15 ms (released 344615 stale masks)
+GlobalFineGrid live unique mask count: 117544
+
+Global fine-grid construction time: 4592.12 ms
+
+Global FineGrid after streaming merge NE/NW/SW/SE
+  cols=958, rows=958, cells=917764
+  avg_size=248.32, max_size=404
+  unique_mask_count=117544
+
+Boundary weight computation time: 1605.70 ms
+
+Recommended parameters on GlobalFineGrid:
+  target_cols=303, target_rows=303
+  target_grid_cells=91777
+  achieved_compression=10.00
+  total_precision=0.95, cell_precision=0.90
+  max_total_error=11994526
+  max_cell_error=38
+
+build_coarse_grid_by_direct time: 525.76 ms
+
+Mode 2 initial TopWeight grid (mode1)
+  cols=303, rows=303, cells=91809
+  total_positive_error=616526
+  max_cell_extra=21
+  avg_candidate_size=244.45, max_candidate_size=405
+  avg_candidate_size_weighted_by_fine_cell=248.99
+  unique_mask_count=70924
+
+Mode 2 budget check:
+  initial TopWeight grid already satisfies the error budgets, Mode 2 equals Mode 1
+
+build_grid_by_mixed time: 563.62 ms
+
+Final Global GRID (mode2)
+  cols=303, rows=303, cells=91809
+  total_positive_error=616526
+  max_cell_extra=21
+  avg_candidate_size=244.45, max_candidate_size=405
+  avg_candidate_size_weighted_by_fine_cell=248.99
+  unique_mask_count=70924
+
+Exported GRID database for Piano-PIR:
+  DB file      : /SkyDB/skyagg_griddb_3_1000_ANTI_mode2_95_90.pir.db
+  metadata     : /SkyDB/skyagg_griddb_3_1000_ANTI_mode2_95_90.pir.meta.json
+  DB records   : 91809
+  one query -> one PIR index -> one full skyline record
+
+✅ 3_1000_ANTI.txt [mode2] 执行成功 (16.37s)
+💾 系统内存: 已用 3.2GB / 总计 247.2GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 3.3GB
+
+[9/18] 处理: 4_1000_ANTI [mode1]
+
+================================================================================
+文件: 4_1000_ANTI.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_4_1000_ANTI_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_1000_ANTI.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_4_1000_ANTI_mode1_75_50
+================================================================================
+
+[STDOUT]
+Loaded 1000 points from ./data/dataset/4_1000_ANTI.txt
+Expected cols=958, rows=958, cells=917764
+NE-Quadrant column scan/merge/compact time: 926.79 ms (released 0 stale masks)
+NW-Quadrant column scan/merge/compact time: 1288.55 ms (released 415925 stale masks)
+SW-Quadrant column scan/merge/compact time: 991.63 ms (released 43739 stale masks)
+SE-Quadrant column scan/merge/compact time: 1186.36 ms (released 302474 stale masks)
+GlobalFineGrid live unique mask count: 83918
+
+Global fine-grid construction time: 4596.81 ms
+
+Global FineGrid after streaming merge NE/NW/SW/SE
+  cols=958, rows=958, cells=917764
+  avg_size=387.00, max_size=536
+  unique_mask_count=83918
+
+Boundary weight computation time: 1604.23 ms
+
+Recommended parameters on GlobalFineGrid:
+  target_cols=303, target_rows=303
+  target_grid_cells=91777
+  achieved_compression=10.00
+  total_precision=0.75, cell_precision=0.50
+  max_total_error=118390236
+  max_cell_error=482
+
+build_coarse_grid_by_direct time: 516.30 ms
+
+Final Global GRID (mode1)
+  cols=303, rows=303, cells=91809
+  total_positive_error=259800
+  max_cell_extra=22
+  avg_candidate_size=385.98, max_candidate_size=536
+  avg_candidate_size_weighted_by_fine_cell=387.28
+  unique_mask_count=66997
+
+Exported GRID database for Piano-PIR:
+  DB file      : /SkyDB/skyagg_griddb_4_1000_ANTI_mode1_75_50.pir.db
+  metadata     : /SkyDB/skyagg_griddb_4_1000_ANTI_mode1_75_50.pir.meta.json
+  DB records   : 91809
+  one query -> one PIR index -> one full skyline record
+
+✅ 4_1000_ANTI.txt [mode1] 执行成功 (20.19s)
+💾 系统内存: 已用 3.2GB / 总计 247.2GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 3.4GB
+
+[10/18] 处理: 4_1000_ANTI [mode2]
+
+================================================================================
+文件: 4_1000_ANTI.txt
+模式: mode2
+输出: /SkyDB/skyagg_griddb_4_1000_ANTI_mode2_95_90
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/4_1000_ANTI.txt --mode mode2 --pi-avg 0.95 --pi-min 0.9 --export-prefix /SkyDB/skyagg_griddb_4_1000_ANTI_mode2_95_90
+================================================================================
+
+[STDOUT]
+Loaded 1000 points from ./data/dataset/4_1000_ANTI.txt
+Expected cols=958, rows=958, cells=917764
+NE-Quadrant column scan/merge/compact time: 914.97 ms (released 0 stale masks)
+NW-Quadrant column scan/merge/compact time: 1264.21 ms (released 415925 stale masks)
+SW-Quadrant column scan/merge/compact time: 989.32 ms (released 43739 stale masks)
+SE-Quadrant column scan/merge/compact time: 1172.36 ms (released 302474 stale masks)
+GlobalFineGrid live unique mask count: 83918
+
+Global fine-grid construction time: 4546.69 ms
+
+Global FineGrid after streaming merge NE/NW/SW/SE
+  cols=958, rows=958, cells=917764
+  avg_size=387.00, max_size=536
+  unique_mask_count=83918
+
+Boundary weight computation time: 1604.95 ms
+
+Recommended parameters on GlobalFineGrid:
+  target_cols=303, target_rows=303
+  target_grid_cells=91777
+  achieved_compression=10.00
+  total_precision=0.95, cell_precision=0.90
+  max_total_error=18693195
+  max_cell_error=53
+
+build_coarse_grid_by_direct time: 514.33 ms
+
+Mode 2 initial TopWeight grid (mode1)
+  cols=303, rows=303, cells=91809
+  total_positive_error=259800
+  max_cell_extra=22
+  avg_candidate_size=385.98, max_candidate_size=536
+  avg_candidate_size_weighted_by_fine_cell=387.28
+  unique_mask_count=66997
+
+Mode 2 budget check:
+  initial TopWeight grid already satisfies the error budgets, Mode 2 equals Mode 1
+
+build_grid_by_mixed time: 552.96 ms
+
+Final Global GRID (mode2)
+  cols=303, rows=303, cells=91809
+  total_positive_error=259800
+  max_cell_extra=22
+  avg_candidate_size=385.98, max_candidate_size=536
+  avg_candidate_size_weighted_by_fine_cell=387.28
+  unique_mask_count=66997
+
+Exported GRID database for Piano-PIR:
+  DB file      : /SkyDB/skyagg_griddb_4_1000_ANTI_mode2_95_90.pir.db
+  metadata     : /SkyDB/skyagg_griddb_4_1000_ANTI_mode2_95_90.pir.meta.json
+  DB records   : 91809
+  one query -> one PIR index -> one full skyline record
+
+✅ 4_1000_ANTI.txt [mode2] 执行成功 (20.16s)
+💾 系统内存: 已用 3.2GB / 总计 247.2GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 3.3GB
+
+[11/18] 处理: 5_1000_ANTI [mode1]
+
+================================================================================
+文件: 5_1000_ANTI.txt
+模式: mode1
+输出: /SkyDB/skyagg_griddb_5_1000_ANTI_mode1_75_50
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/5_1000_ANTI.txt --mode mode1 --pi-avg 0.75 --pi-min 0.5 --export-prefix /SkyDB/skyagg_griddb_5_1000_ANTI_mode1_75_50
+================================================================================
+
+[STDOUT]
+Loaded 1000 points from ./data/dataset/5_1000_ANTI.txt
+Expected cols=958, rows=958, cells=917764
+NE-Quadrant column scan/merge/compact time: 948.32 ms (released 0 stale masks)
+NW-Quadrant column scan/merge/compact time: 1343.04 ms (released 415925 stale masks)
+SW-Quadrant column scan/merge/compact time: 991.43 ms (released 37702 stale masks)
+SE-Quadrant column scan/merge/compact time: 1213.96 ms (released 249440 stale masks)
+GlobalFineGrid live unique mask count: 57612
+
+Global fine-grid construction time: 4698.83 ms
+
+Global FineGrid after streaming merge NE/NW/SW/SE
+  cols=958, rows=958, cells=917764
+  avg_size=511.02, max_size=715
+  unique_mask_count=57612
+
+Boundary weight computation time: 1626.96 ms
+
+Recommended parameters on GlobalFineGrid:
+  target_cols=304, target_rows=302
+  target_grid_cells=91777
+  achieved_compression=10.00
+  total_precision=0.75, cell_precision=0.50
+  max_total_error=156331366
+  max_cell_error=626
+
+build_coarse_grid_by_direct time: 507.83 ms
+
+Final Global GRID (mode1)
+  cols=304, rows=302, cells=91808
+  total_positive_error=91275
+  max_cell_extra=26
+  avg_candidate_size=504.13, max_candidate_size=715
+  avg_candidate_size_weighted_by_fine_cell=511.12
+  unique_mask_count=53421
+
+Exported GRID database for Piano-PIR:
+  DB file      : /SkyDB/skyagg_griddb_5_1000_ANTI_mode1_75_50.pir.db
+  metadata     : /SkyDB/skyagg_griddb_5_1000_ANTI_mode1_75_50.pir.meta.json
+  DB records   : 91808
+  one query -> one PIR index -> one full skyline record
+
+✅ 5_1000_ANTI.txt [mode1] 执行成功 (24.17s)
+💾 系统内存: 已用 3.2GB / 总计 247.2GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 3.4GB
+
+[12/18] 处理: 5_1000_ANTI [mode2]
+
+================================================================================
+文件: 5_1000_ANTI.txt
+模式: mode2
+输出: /SkyDB/skyagg_griddb_5_1000_ANTI_mode2_95_90
+命令: /home/ecs-user/Sky/venv/bin/python SkyAgg_GRID_DB.py build --data ./data/dataset/5_1000_ANTI.txt --mode mode2 --pi-avg 0.95 --pi-min 0.9 --export-prefix /SkyDB/skyagg_griddb_5_1000_ANTI_mode2_95_90
+================================================================================
+
+[STDOUT]
+Loaded 1000 points from ./data/dataset/5_1000_ANTI.txt
+Expected cols=958, rows=958, cells=917764
+NE-Quadrant column scan/merge/compact time: 930.97 ms (released 0 stale masks)
+NW-Quadrant column scan/merge/compact time: 1352.32 ms (released 415925 stale masks)
+SW-Quadrant column scan/merge/compact time: 983.95 ms (released 37702 stale masks)
+SE-Quadrant column scan/merge/compact time: 1214.36 ms (released 249440 stale masks)
+GlobalFineGrid live unique mask count: 57612
+
+Global fine-grid construction time: 4674.29 ms
+
+Global FineGrid after streaming merge NE/NW/SW/SE
+  cols=958, rows=958, cells=917764
+  avg_size=511.02, max_size=715
+  unique_mask_count=57612
+
+Boundary weight computation time: 1615.50 ms
+
+Recommended parameters on GlobalFineGrid:
+  target_cols=304, target_rows=302
+  target_grid_cells=91777
+  achieved_compression=10.00
+  total_precision=0.95, cell_precision=0.90
+  max_total_error=24683900
+  max_cell_error=69
+
+build_coarse_grid_by_direct time: 508.69 ms
+
+Mode 2 initial TopWeight grid (mode1)
+  cols=304, rows=302, cells=91808
+  total_positive_error=91275
+  max_cell_extra=26
+  avg_candidate_size=504.13, max_candidate_size=715
+  avg_candidate_size_weighted_by_fine_cell=511.12
+  unique_mask_count=53421
+
+Mode 2 budget check:
+  initial TopWeight grid already satisfies the error budgets, Mode 2 equals Mode 1
+
+build_grid_by_mixed time: 546.78 ms
+
+Final Global GRID (mode2)
+  cols=304, rows=302, cells=91808
+  total_positive_error=91275
+  max_cell_extra=26
+  avg_candidate_size=504.13, max_candidate_size=715
+  avg_candidate_size_weighted_by_fine_cell=511.12
+  unique_mask_count=53421
+
+Exported GRID database for Piano-PIR:
+  DB file      : /SkyDB/skyagg_griddb_5_1000_ANTI_mode2_95_90.pir.db
+  metadata     : /SkyDB/skyagg_griddb_5_1000_ANTI_mode2_95_90.pir.meta.json
+  DB records   : 91808
+  one query -> one PIR index -> one full skyline record
+
+✅ 5_1000_ANTI.txt [mode2] 执行成功 (24.39s)
+💾 系统内存: 已用 3.2GB / 总计 247.2GB
+🔄 交换内存: 已用 0.0GB / 总计 0.0GB
+📊 峰值内存: 3.4GB
+
+================================================================================
+批量构建完成!
+================================================================================
+总任务数: 18
+成功: 12
+失败: 0
+
+📁 生成的文件:
+  - skyagg_griddb_1_10000_ANTI_mode1_75_50.pir.db (5059.4 MB)
+  - skyagg_griddb_1_1000_ANTI_mode1_75_50.pir.db (92.5 MB)
+  - skyagg_griddb_1_1000_ANTI_mode1_75_50.pir.meta.json (150.4 KB)
+  - skyagg_griddb_1_1000_ANTI_mode2_95_90.pir.db (690.4 MB)
+  - skyagg_griddb_1_1000_ANTI_mode2_95_90.pir.meta.json (197.2 KB)
+  - skyagg_griddb_1_7000_ANTI_mode1_75_50.pir.db (4032.5 MB)
+  - skyagg_griddb_1_7000_ANTI_mode1_75_50.pir.meta.json (967.2 KB)
+  - skyagg_griddb_1_7000_ANTI_mode2_75_50.pir.db (4032.5 MB)
+  - skyagg_griddb_1_7000_ANTI_mode2_75_50.pir.meta.json (967.2 KB)
+  - skyagg_griddb_1_9000_ANTI_mode1_75_50.pir.db (5728.0 MB)
+  - skyagg_griddb_1_9000_ANTI_mode1_75_50.pir.meta.json (1.2 MB)
+  - skyagg_griddb_1_9000_ANTI_mode2_95_90.pir.db (39309.8 MB)
+  - skyagg_griddb_1_9000_ANTI_mode2_95_90.pir.meta.json (1.5 MB)
+  - skyagg_griddb_2_1000_ANTI_mode1_75_50.pir.db (182.1 MB)
+  - skyagg_griddb_2_1000_ANTI_mode1_75_50.pir.meta.json (165.9 KB)
+  - skyagg_griddb_2_1000_ANTI_mode2_95_90.pir.db (182.1 MB)
+  - skyagg_griddb_2_1000_ANTI_mode2_95_90.pir.meta.json (165.9 KB)
+  - skyagg_griddb_3_1000_ANTI_mode1_75_50.pir.db (284.4 MB)
+  - skyagg_griddb_3_1000_ANTI_mode1_75_50.pir.meta.json (181.4 KB)
+  - skyagg_griddb_3_1000_ANTI_mode2_95_90.pir.db (284.4 MB)
+  - skyagg_griddb_3_1000_ANTI_mode2_95_90.pir.meta.json (181.4 KB)
+  - skyagg_griddb_4_1000_ANTI_mode1_75_50.pir.db (376.1 MB)
+  - skyagg_griddb_4_1000_ANTI_mode1_75_50.pir.meta.json (197.0 KB)
+  - skyagg_griddb_4_1000_ANTI_mode2_95_90.pir.db (376.1 MB)
+  - skyagg_griddb_4_1000_ANTI_mode2_95_90.pir.meta.json (197.0 KB)
+  - skyagg_griddb_5_1000_ANTI_mode1_75_50.pir.db (501.5 MB)
+  - skyagg_griddb_5_1000_ANTI_mode1_75_50.pir.meta.json (212.5 KB)
+  - skyagg_griddb_5_1000_ANTI_mode2_95_90.pir.db (501.5 MB)
+  - skyagg_griddb_5_1000_ANTI_mode2_95_90.pir.meta.json (212.5 KB)
+================================================================================
+📝 日志文件: logs/build_log_20260728_142219.txt
